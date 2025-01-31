@@ -316,3 +316,195 @@ button{
         margin-left: 10px;
     }
 }
+@media(min-width:320px) and (max-width:374px){
+
+    header{
+        padding: 10px 0 10px 0;
+        background-color: var(--bg-color1);
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 15px;
+    }
+    .menu_mobile_bar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-left: 20px;
+    }
+    .bar{
+        background-color: var(--bg-color2);
+        width: 2rem;
+        height: 3px;
+    }
+    .menu_mobile{
+        height: 100vh;
+        background-color: var(--bg-color1);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        color: var(--bg-color3);
+        margin-top: 30px;
+    }
+    .menu_mobile ul li{
+        font-size:1,5rem;
+        margin: 20px;
+        list-style: none;
+    }
+    .text_menu{
+        width: 100%;
+        text-align: center;
+    }
+    .text_menu h1{
+        color: var(--bg-color2);
+        font-size: 2rem;
+    }
+    .area_filtro{
+        margin-top: 10px;
+    }
+    .filtro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--bg-color1);
+        gap: 30px;
+    }
+   
+    .area{
+        margin-top: 20px;
+        height: 100vw;
+        overflow: scroll;
+        
+    }
+    .area_conteudo{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        border: 1px solid var(--bg-color2);
+        margin: 10px;
+    }
+    .area_img{
+        border-right:1px solid var(--bg-color2) ;
+        object-fit: contain;
+    }
+    .area_img img{
+        width: 100px;
+        object-fit: contain;
+    }
+    .area_text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+        color: var(--bg-color2);
+        margin-left: 10px;
+    }
+}
+@media (max-width:319px){
+
+    header{
+        padding: 10px 0 10px 0;
+        background-color: var(--bg-color1);
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 15px;
+    }
+    .menu_mobile_bar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-left: 20px;
+    }
+    .bar{
+        background-color: var(--bg-color2);
+        width: 2rem;
+        height: 3px;
+    }
+    .menu_mobile{
+        height: 100vh;
+        background-color: var(--bg-color1);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap:30px;
+        color: var(--bg-color3);
+        margin-top: 30px;
+    }
+    .menu_mobile ul li{
+        font-size:1,5rem;
+        margin: 20px;
+        list-style: none;
+    }
+    .text_menu{
+        width: 100%;
+        text-align: center;
+    }
+    .text_menu h1{
+        color: var(--bg-color2);
+        font-size: 2rem;
+    }
+    .area_filtro{
+        margin-top: 10px;
+    }
+    .filtro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--bg-color1);
+        gap: 30px;
+    }
+   
+    .area{
+        margin-top: 20px;
+        height: 100vw;
+        overflow: scroll;
+        
+    }
+    .area_conteudo{
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        border: 1px solid var(--bg-color2);
+        margin: 10px;
+    }
+    .area_img{
+        border-right:1px solid var(--bg-color2) ;
+        object-fit: contain;
+    }
+    .area_img img{
+        width: 100px;
+        object-fit: contain;
+    }
+    .area_text{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+        color: var(--bg-color2);
+        margin-left: 10px;
+    }
+}
