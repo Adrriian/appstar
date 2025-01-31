@@ -28,6 +28,15 @@ button{
     padding: 10px;
     width: 60%;
 }
+
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
+    }
+
 @media(min-width:768px) and (max-width:1023px){
 
     header{
@@ -95,6 +104,8 @@ button{
     }
    
     .area{
+        border: 1px solid var(--bg-color2);
+        background-color: rgb(219, 218, 218);
         margin-top: 20px;
         height: 70vh;
         overflow: scroll;
@@ -104,7 +115,8 @@ button{
         display: grid;
         grid-template-columns: 100px 1fr;
         border: 1px solid var(--bg-color2);
-        margin: 10px;
+        margin: 10px 0 10px 0;
+        background-color: var(--bg-color3);
     }
     .area_img{
         border-right:1px solid var(--bg-color2) ;
@@ -122,6 +134,14 @@ button{
         gap: 15px;
         color: var(--bg-color2);
         margin-left: 10px;
+    }
+    
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
     }
 }
 @media(min-width:425px) and (max-width:767px){
@@ -191,16 +211,18 @@ button{
     }
    
     .area{
+        border: 1px solid var(--bg-color2);
+        background-color: rgb(219, 218, 218);
         margin-top: 20px;
         height: 70vh;
         overflow: scroll;
-        
     }
     .area_conteudo{
         display: grid;
         grid-template-columns: 100px 1fr;
         border: 1px solid var(--bg-color2);
-        margin: 10px;
+        margin: 10px 0 10px 0;
+        background-color: var(--bg-color3);
     }
     .area_img{
         border-right:1px solid var(--bg-color2) ;
@@ -218,6 +240,14 @@ button{
         gap: 15px;
         color: var(--bg-color2);
         margin-left: 10px;
+    }
+    
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
     }
 }
 @media(min-width:375px) and (max-width:424px){
@@ -287,16 +317,18 @@ button{
     }
    
     .area{
+        border: 1px solid var(--bg-color2);
+        background-color: rgb(219, 218, 218);
         margin-top: 20px;
         height: 70vh;
         overflow: scroll;
-        
     }
     .area_conteudo{
         display: grid;
         grid-template-columns: 100px 1fr;
         border: 1px solid var(--bg-color2);
-        margin: 10px;
+        margin: 10px 0 10px 0;
+        background-color: var(--bg-color3);
     }
     .area_img{
         border-right:1px solid var(--bg-color2) ;
@@ -314,6 +346,14 @@ button{
         gap: 15px;
         color: var(--bg-color2);
         margin-left: 10px;
+    }
+    
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
     }
 }
 @media(min-width:320px) and (max-width:374px){
@@ -383,16 +423,18 @@ button{
     }
    
     .area{
+        border: 1px solid var(--bg-color2);
+        background-color: rgb(219, 218, 218);
         margin-top: 20px;
         height: 70vh;
         overflow: scroll;
-        
     }
     .area_conteudo{
         display: grid;
         grid-template-columns: 100px 1fr;
         border: 1px solid var(--bg-color2);
-        margin: 10px;
+        margin: 10px 0 10px 0;
+        background-color: var(--bg-color3);
     }
     .area_img{
         border-right:1px solid var(--bg-color2) ;
@@ -410,6 +452,14 @@ button{
         gap: 15px;
         color: var(--bg-color2);
         margin-left: 10px;
+    }
+    
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
     }
 }
 @media (max-width:319px){
@@ -479,16 +529,18 @@ button{
     }
    
     .area{
+        border: 1px solid var(--bg-color2);
+        background-color: rgb(219, 218, 218);
         margin-top: 20px;
         height: 70vh;
         overflow: scroll;
-        
     }
     .area_conteudo{
         display: grid;
         grid-template-columns: 100px 1fr;
         border: 1px solid var(--bg-color2);
-        margin: 10px;
+        margin: 10px 0 10px 0;
+        background-color: var(--bg-color3);
     }
     .area_img{
         border-right:1px solid var(--bg-color2) ;
@@ -506,5 +558,13 @@ button{
         gap: 15px;
         color: var(--bg-color2);
         margin-left: 10px;
+    }
+    
+    .sb{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .sm{
+        margin-top: 0;
     }
 }
