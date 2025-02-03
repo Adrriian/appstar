@@ -1,3 +1,53 @@
+/*gerais*/
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-size: 1rem;
+     font-family: Inter, serif;
+     font-weight: bold;
+ }
+
+ :root {
+     --bg-color1: #222e5a;
+     --bg-color2: #ff5900;
+     --bg-color3: #fff;
+ }
+
+ .conteiner {
+     width: 100%;
+ }
+
+ .conteiner_conteudo {
+     width: 80vw;
+     margin: auto;
+ }
+
+ button {
+     background-color: var(--bg-color1);
+     color: var(--bg-color2);
+     text-align: center;
+     border-radius: 10px;
+     border: none;
+     padding: 10px;
+     width: 60%;
+ }
+
+ .sb {
+     border-bottom: 0;
+     margin-bottom: 0;
+ }
+
+ .sm {
+     margin-top: 0;
+ }
+
+ .menu_mobile_seta img {
+     width: 45px;
+     object-fit: contain;
+     border-radius: 100px;
+     margin-left: 30px;
+ }
 
 header {
     padding: 10px 0 10px 0;
