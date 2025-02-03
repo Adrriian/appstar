@@ -249,7 +249,8 @@
         align-items: center;
         flex-direction: column;
      }
-     .area_contet_img img{
+     .area_contet_img img,
+     .area_content_return img {
         width: 100px;
      }
      .sb {
