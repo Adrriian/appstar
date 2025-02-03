@@ -258,20 +258,6 @@
         height: 85vh;
         background-color: var(--bg-color3);
      }
-     .area_content_return img{
-        width: 45px;
-     }
-     .area_content_img {
-        width: 100%;
-        text-align: center;
-     }
-     .area_content_img img {
-        width: 45%;
-        object-fit: contain;
-     }
-     .area_content_text{
-        color:var(--bg-color1);
-     }
      .area_content_return{
         width: 100%;
         display: grid;
@@ -280,8 +266,23 @@
         justify-content: center;
         background-color: var(--bg-color1);
      }
+     .area_content_return img{
+        width: 45px;
+     }
      .area_content_return h1{
         color: var(--bg-color2);
+     }
+     .area_content_img {
+        width: 100%;
+        text-align: center;
+     }
+     .area_content_img img {
+        margin-left: 20px;
+        width: 45%;
+        object-fit: contain;
+     }
+     .area_content_text{
+        color:var(--bg-color1);
      }
      .sb {
          border-bottom: 0;
