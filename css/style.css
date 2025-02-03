@@ -269,6 +269,9 @@
         justify-content: center;
         background-color: var(--bg-color1);
      }
+     .area_content_return h1{
+        color: var(--bg-color2);
+     }
      .sb {
          border-bottom: 0;
          margin-bottom: 0;
