@@ -170,7 +170,8 @@
          color: var(--bg-color1);
          gap: 30px;
      }
-     .modal{
+     .modalf,
+     .modalc{
         display: none;
         align-items: center;
         justify-content: center;
