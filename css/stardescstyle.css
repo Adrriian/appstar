@@ -1,0 +1,26 @@
+
+header {
+    padding: 10px 0 10px 0;
+    background-color: var(--bg-color1);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu_area {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 6vh 94vh;
+    align-items: flex-start;
+    justify-items: center;
+    width: 100%;
+    height: 6vh;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+.menu {
+    width: 100%;
+}
