@@ -252,8 +252,10 @@
      .area_content_open{
         background-color: var(--bg-color3);
      }
-     .area_contet_img img,
-     .area_content_return img {
+     .area_content_return img{
+        width: 45px;
+     }
+     .area_contet_img img {
         width: 100px;
      }
      .sb {
