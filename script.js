@@ -24,7 +24,7 @@ function btn(button){
 }
 
 
-function btns(button){
+function btns(){
     let lojas = document.querySelector(".modalc");
     let fechar = document.querySelector(".fechar_modal")
 
