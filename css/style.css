@@ -358,16 +358,42 @@
          color: var(--bg-color1);
          gap: 30px;
      }
-     
-    .filtro_area_aberto{
+     .modalf,
+     .modalc{
         display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+     }
+    .filtro_area_aberto{
+        display: grid;
+        grid-template-columns: 1fr;
         padding: 10px;
-       position: absolute;
        z-index: 1;
-       width: 80%;
-       height: 80%;
-       background-color: var(--bg-color1);
-       color: var(--bg-color3);
+       width: 90vw;
+       height: 80vh;
+       background-color: var(--bg-color3);
+       color: var(--bg-color2);
+       border-radius: 10px;
+       border: 1px solid var(--bg-color2);
+        }
+
+        .filtro_cidade_text,
+        .filtro_estabelecimento_text{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 2fr;
+            padding: 10px;
+        }
+        .filtro_estabelecimento,
+        .filtro_cidade{
+            display: flex;
+            padding: 10px;
         }
      .area {
          border: 1px solid var(--bg-color2);
@@ -533,15 +559,42 @@
          gap: 30px;
      }
 
-     .filtro_area_aberto{
+     .modalf,
+     .modalc{
         display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+     }
+    .filtro_area_aberto{
+        display: grid;
+        grid-template-columns: 1fr;
         padding: 10px;
-       position: absolute;
        z-index: 1;
-       width: 80%;
-       height: 80%;
-       background-color: var(--bg-color1);
-       color: var(--bg-color3);
+       width: 90vw;
+       height: 80vh;
+       background-color: var(--bg-color3);
+       color: var(--bg-color2);
+       border-radius: 10px;
+       border: 1px solid var(--bg-color2);
+        }
+
+        .filtro_cidade_text,
+        .filtro_estabelecimento_text{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 2fr;
+            padding: 10px;
+        }
+        .filtro_estabelecimento,
+        .filtro_cidade{
+            display: flex;
+            padding: 10px;
         }
      .area {
          border: 1px solid var(--bg-color2);
@@ -701,15 +754,42 @@
          gap: 10px;
      }
 
-     .filtro_area_aberto{
+     .modalf,
+     .modalc{
         display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+     }
+    .filtro_area_aberto{
+        display: grid;
+        grid-template-columns: 1fr;
         padding: 10px;
-       position: absolute;
        z-index: 1;
-       width: 80%;
-       height: 80%;
-       background-color: var(--bg-color1);
-       color: var(--bg-color3);
+       width: 90vw;
+       height: 80vh;
+       background-color: var(--bg-color3);
+       color: var(--bg-color2);
+       border-radius: 10px;
+       border: 1px solid var(--bg-color2);
+        }
+
+        .filtro_cidade_text,
+        .filtro_estabelecimento_text{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 2fr;
+            padding: 10px;
+        }
+        .filtro_estabelecimento,
+        .filtro_cidade{
+            display: flex;
+            padding: 10px;
         }
      .area {
          border: 1px solid var(--bg-color2);
@@ -888,16 +968,42 @@
          color: var(--bg-color1);
          gap: 10px;
      }
-
-     .filtro_area_aberto{
+     .modalf,
+     .modalc{
         display: none;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+     }
+    .filtro_area_aberto{
+        display: grid;
+        grid-template-columns: 1fr;
         padding: 10px;
-       position: absolute;
        z-index: 1;
-       width: 80%;
-       height: 80%;
-       background-color: var(--bg-color1);
-       color: var(--bg-color3);
+       width: 90vw;
+       height: 80vh;
+       background-color: var(--bg-color3);
+       color: var(--bg-color2);
+       border-radius: 10px;
+       border: 1px solid var(--bg-color2);
+        }
+
+        .filtro_cidade_text,
+        .filtro_estabelecimento_text{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 2fr;
+            padding: 10px;
+        }
+        .filtro_estabelecimento,
+        .filtro_cidade{
+            display: flex;
+            padding: 10px;
         }
      .area {
          border: 1px solid var(--bg-color2);
