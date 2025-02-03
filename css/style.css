@@ -165,15 +165,11 @@
          color: var(--bg-color1);
          gap: 30px;
      }
-     .filtro {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--bg-color1);
-        gap: 30px;
-    }
+   
     .filtro_area_aberto{
-        display: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2fr);
         padding: 10px;
        position: absolute;
        z-index: 1;
@@ -181,6 +177,13 @@
        height: 80%;
        background-color: var(--bg-color1);
        color: var(--bg-color3);
+        }
+        .filtro_cidade,
+        .filtro_estabelecimento{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row: 2fr;
+            padding: 10px;
         }
      .area {
          border: 1px solid var(--bg-color2);
