@@ -263,10 +263,14 @@
      }
      .area_contet_img {
         width: 100%;
+        text-align: center;
      }
      .area_contet_img img {
-
+        width: 45%;
         object-fit: contain;
+     }
+     .area_content_text{
+        color:var(--bg-color1);
      }
      .area_content_return{
         width: 100%;
