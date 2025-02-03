@@ -172,13 +172,14 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2fr);
         padding: 10px;
-       position: absolute;
+       position: fixed;
        z-index: 1;
        width: 80%;
        height: 80%;
        background-color: var(--bg-color1);
        color: var(--bg-color3);
         }
+
         .filtro_cidade,
         .filtro_estabelecimento{
             display: grid;
