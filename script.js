@@ -22,3 +22,17 @@ function btn(button){
             filtrof.style.display = 'none'
     }
 }
+
+function btn(button){
+    let lojas = document.querySelector(".modalc");
+    let fechar = document.querySelector(".fechar_modal")
+
+    switch(button){
+        case 'Aj venturi':
+            lojas.style.display = 'flex'
+        break
+        case 'Ajventuri_m':
+            fechar.style.display = 'none'
+            
+     }
+}
