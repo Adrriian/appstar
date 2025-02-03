@@ -250,6 +250,9 @@
         flex-direction: column;
      }
      .area_content_open{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 90vw;
         height: 85vh;
         background-color: var(--bg-color3);
