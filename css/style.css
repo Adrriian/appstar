@@ -243,7 +243,15 @@
          color: var(--bg-color2);
          margin-left: 10px;
      }
-     
+     .modalc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+     .area_contet_img img{
+        width: 100px;
+     }
      .sb {
          border-bottom: 0;
          margin-bottom: 0;
