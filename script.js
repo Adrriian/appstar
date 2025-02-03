@@ -16,7 +16,7 @@ function btn(button){
     let filtrof = document.querySelector(".filtro_area_aberto");
     switch(button){
         case 'cidade':
-                filtrof.style.display = 'flex'
-            break
+            filtrof.style.display = 'flex'
+        break
     }
 }

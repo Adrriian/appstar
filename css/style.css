@@ -333,7 +333,17 @@
          color: var(--bg-color1);
          gap: 30px;
      }
-
+     
+    .filtro_area_aberto{
+        display: none;
+        padding: 10px;
+       position: absolute;
+       z-index: 1;
+       width: 80%;
+       height: 80%;
+       background-color: var(--bg-color1);
+       color: var(--bg-color3);
+        }
      .area {
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
@@ -498,6 +508,16 @@
          gap: 30px;
      }
 
+     .filtro_area_aberto{
+        display: none;
+        padding: 10px;
+       position: absolute;
+       z-index: 1;
+       width: 80%;
+       height: 80%;
+       background-color: var(--bg-color1);
+       color: var(--bg-color3);
+        }
      .area {
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
@@ -656,6 +676,16 @@
          gap: 10px;
      }
 
+     .filtro_area_aberto{
+        display: none;
+        padding: 10px;
+       position: absolute;
+       z-index: 1;
+       width: 80%;
+       height: 80%;
+       background-color: var(--bg-color1);
+       color: var(--bg-color3);
+        }
      .area {
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
@@ -834,6 +864,16 @@
          gap: 10px;
      }
 
+     .filtro_area_aberto{
+        display: none;
+        padding: 10px;
+       position: absolute;
+       z-index: 1;
+       width: 80%;
+       height: 80%;
+       background-color: var(--bg-color1);
+       color: var(--bg-color3);
+        }
      .area {
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
