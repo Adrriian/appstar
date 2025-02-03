@@ -177,8 +177,8 @@
        z-index: 1;
        width: 80%;
        height: 80%;
-       background-color: var(--bg-color3);
-       color: var(--bg-color2);
+       background-color: var(--bg-color1);
+       color: var(--bg-color3);
         }
      .area {
          border: 1px solid var(--bg-color2);
