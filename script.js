@@ -13,10 +13,10 @@ menu.addEventListener("click", () => {
 })
 
 function btn(button){
-    let filtrof = document.querySelector(".filtro_area_aberto");
+    let filtrof = document.querySelector(".modal");
     switch(button){
         case 'cidade':
-            filtrof.style.display = 'grid'
+            filtrof.style.display = 'flex'
         break
         case 'filtrar':
             filtrof.style.display = 'none'
