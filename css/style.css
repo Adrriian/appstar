@@ -315,7 +315,7 @@
      }
      .content_endereço_body{
         display: grid;
-        grid-template-columns: repeat(1fr);
+        grid-template-columns: repeat(2, 1fr);
      }
      .sb {
          border-bottom: 0;
