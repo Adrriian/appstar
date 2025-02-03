@@ -24,9 +24,9 @@ function btn(button){
 }
 
 let btns = document.querySelector(".area_conteudo")
-btns.addEventListener("click", btns)
+btns.addEventListener("click", btns2)
 
-function btns(){
+function btns2(){
     let lojas = document.querySelector(".modalc");
     let fechar = document.querySelector(".fechar_modal")
 
