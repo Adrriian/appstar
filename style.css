@@ -37,7 +37,7 @@ button{
         margin-top: 0;
     }
     .menu_mobile_seta img{
-        width: 50px;
+        width: 45px;
         object-fit: contain;
         border-radius: 100px;
         margin-left: 30px;
@@ -61,6 +61,13 @@ button{
         pointer-events: none;
         height: 0;
         overflow: hidden;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .fm h1{
+        font-size: 1.7rem;
     }
 @media(min-width:768px) and (max-width:1023px){
 
@@ -181,7 +188,7 @@ button{
         margin-top: 20px;
     }
     .fm h1{
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     button{
         font-size: 0.8rem;
@@ -305,7 +312,7 @@ button{
         margin-top: 20px;
     }
     .fm h1{
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     button{
         font-size: 0.8rem;
@@ -436,7 +443,7 @@ button{
         margin-top: 20px;
     }
     .fm h1{
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     button{
         font-size: 0.8rem;
@@ -572,7 +579,7 @@ button{
         margin-top: 13px;
     }
     .menu_mobile_seta img{
-        width: 30px;
+        width: 45px;
         object-fit: contain;
         border-radius: 100px;
         margin-left: 20px;
@@ -588,7 +595,7 @@ button{
         margin-top: 20px;
     }
     .fm h1{
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     button{
         font-size: 0.8rem;
@@ -708,7 +715,7 @@ button{
         line-height: 21px;
     }
     .menu_mobile_seta img{
-        width: 20px;
+        width: px;
         object-fit: contain;
         border-radius: 100px;
         margin-left: 20px;
@@ -724,7 +731,7 @@ button{
         margin-top: 20px;
     }
     .fm h1{
-        font-size: 1rem;
+        font-size: 1.7rem;
     }
     button{
         font-size: 0.8rem;
