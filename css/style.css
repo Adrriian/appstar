@@ -258,6 +258,12 @@
      .area_contet_img img {
         width: 100px;
      }
+     .area_content_return{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg-color1);
+     }
      .sb {
          border-bottom: 0;
          margin-bottom: 0;
