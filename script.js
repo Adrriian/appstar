@@ -23,17 +23,16 @@ function btn(button){
     }
 }
 
+let btns = document.querySelector(".area_conteudo")
+btns.addEventListener("click", btns)
 
 function btns(){
     let lojas = document.querySelector(".modalc");
     let fechar = document.querySelector(".fechar_modal")
 
-    switch(button){
-        case 'Aj venturi':
-            lojas.style.display = 'flex'
-        break
-        case 'Ajventuri_m':
-            fechar.style.display = 'none'
-            
-     }
+    if(lojas.style.display == "flex"){
+        lojas.style.display = 'flex'
+    }else{
+        lojas.style.display = "flex"
+    }
 }
