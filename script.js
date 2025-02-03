@@ -22,8 +22,9 @@ function btn(button){
             filtrof.style.display = 'none'
     }
 }
+let btns = document.querySelector('.area_conteudo')
 
-function btn(button){
+function click(btns){
     let lojas = document.querySelector(".modalc");
     let fechar = document.querySelector(".fechar_modal")
 
