@@ -182,10 +182,12 @@
         grid-template-columns: 1fr;
         padding: 10px;
        z-index: 1;
-       width: 80%;
-       height: 80%;
+       width: 90vw;
+       height: 80vh;
        background-color: var(--bg-color3);
        color: var(--bg-color2);
+       border-radius: 10px;
+       border: 1px solid var(--bg-color2);
         }
 
         .filtro_cidade,
