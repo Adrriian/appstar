@@ -32,7 +32,9 @@
      padding: 10px;
      width: 60%;
  }
-
+ .fm h1 {
+         font-size: 1.7rem;
+     }
  .sb {
      border-bottom: 0;
      margin-bottom: 0;
@@ -75,27 +77,15 @@ nav {
     width: 100%;
 }
 
-     .menu_mobile {
-         background-color: var(--bg-color1);
-         flex-direction: column;
-         align-items: center;
-         gap: 30px;
-         color: var(--bg-color3);
-         padding: 15px;
-         grid-column: 1 / 4;
-         grid-row: 2 / 3;
-         transition: all 1s ease;
-     }
-
-     .menu_mobile ul li {
-         font-size: 1, 5rem;
-         margin: 20px;
-         list-style: none;
-     }
-
      .text_menu {
          width: 100%;
          text-align: center;
+     }
+.text_stardescontos {
+         margin-top: 20px;
+         color: var(--bg-color1);
+         text-align: justify;
+         line-height: 36px;
      }
 
      .text_menu h1 {
