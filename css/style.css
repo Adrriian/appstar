@@ -250,6 +250,8 @@
         flex-direction: column;
      }
      .area_content_open{
+        width: 90vw;
+        height: 85vh;
         background-color: var(--bg-color3);
      }
      .area_content_return img{
