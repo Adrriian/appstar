@@ -118,6 +118,9 @@ nav {
         text-align: justify;
         line-height: 23px;
     }
+      .text_stardescontos p{
+       font-size: 1rem;
+    }
 }
 @media (min-width:425px) and (max-width:767px){
     .fm h1 {
@@ -139,6 +142,9 @@ nav {
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
+    }
+      .text_stardescontos p{
+       font-size: 1rem;
     }
 }
 @media (min-width:320px) and (max-width:424px){
@@ -162,6 +168,9 @@ nav {
         text-align: justify;
         line-height: 23px;
     }
+      .text_stardescontos p{
+       font-size: 1rem;
+    }
 }
 @media (max-width:319px){
     .fm h1 {
@@ -183,5 +192,8 @@ nav {
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
+    }
+      .text_stardescontos p{
+       font-size: 1rem;
     }
 }
