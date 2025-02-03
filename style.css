@@ -36,12 +36,24 @@ button{
     .sm{
         margin-top: 0;
     }
-
-@media(min-width:768px) and (max-width:1023px){
+    .menu_mobile_seta img{
+        width: 50px;
+        object-fit: contain;
+        border-radius: 100px;
+        margin-left: 30px;
+    }
+    .text_sobrenos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 30px;
+    }
     main{
         display: flex;
         flex-direction: column;
     }
+@media(min-width:768px) and (max-width:1023px){
+
     header{
         padding: 10px 0 10px 0;
         background-color: var(--bg-color1);
@@ -73,14 +85,16 @@ button{
         height: 3px;
     }
     .menu_mobile{
-        height: 100vh;
+        box-sizing: border-box;
+        height: 90vh;
         background-color: var(--bg-color1);
         display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
-        margin-top: 30px;
+        padding: 15px;
+        position: relative;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
@@ -146,6 +160,22 @@ button{
     .sm{
         margin-top: 0;
     }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fm h1{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 36px;
+    }
 }
 @media(min-width:425px) and (max-width:767px){
 
@@ -180,14 +210,16 @@ button{
         height: 3px;
     }
     .menu_mobile{
-        height: 100vh;
+        box-sizing: border-box;
+        height: 90vh;
         background-color: var(--bg-color1);
         display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
-        margin-top: 30px;
+        padding: 15px;
+        position: relative;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
@@ -252,6 +284,23 @@ button{
     .sm{
         margin-top: 0;
     }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fm h1{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 23px;
+    }
+
 }
 @media(min-width:375px) and (max-width:424px){
 
@@ -286,14 +335,16 @@ button{
         height: 3px;
     }
     .menu_mobile{
-        height: 100vh;
+        box-sizing: border-box;
+        height: 90vh;
         background-color: var(--bg-color1);
         display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
-        margin-top: 30px;
+        padding: 15px;
+        position: relative;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
@@ -357,6 +408,28 @@ button{
     }
     .sm{
         margin-top: 0;
+    }
+    .text_sobrenos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 25px;
+    }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fm h1{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 20px;
     }
 }
 @media(min-width:320px) and (max-width:374px){
@@ -392,14 +465,16 @@ button{
         height: 3px;
     }
     .menu_mobile{
-        height: 100vh;
+        box-sizing: border-box;
+        height: 90vh;
         background-color: var(--bg-color1);
         display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
-        margin-top: 30px;
+        padding: 15px;
+        position: relative;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
@@ -463,6 +538,44 @@ button{
     }
     .sm{
         margin-top: 0;
+    }
+    .text_sobrenos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 21px;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 18px;
+    }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 13px;
+    }
+    .menu_mobile_seta img{
+        width: 30px;
+        object-fit: contain;
+        border-radius: 100px;
+        margin-left: 20px;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 17px;
+    }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fm h1{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
     }
 }
 @media (max-width:319px){
@@ -498,14 +611,16 @@ button{
         height: 3px;
     }
     .menu_mobile{
-        height: 100vh;
+        box-sizing: border-box;
+        height: 90vh;
         background-color: var(--bg-color1);
         display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
-        margin-top: 30px;
+        padding: 15px;
+        position: relative;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
@@ -569,5 +684,33 @@ button{
     }
     .sm{
         margin-top: 0;
+    }
+    .text_sobrenos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 21px;
+    }
+    .menu_mobile_seta img{
+        width: 20px;
+        object-fit: contain;
+        border-radius: 100px;
+        margin-left: 20px;
+    }
+    .text_stardescontos{
+        margin-top: 20px;
+        color: var(--bg-color1);
+        text-align:justify;
+        line-height: 16px;
+    }
+    .button_cadastro{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fm h1{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 0.8rem;
     }
 }
