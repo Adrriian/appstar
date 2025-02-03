@@ -169,7 +169,7 @@ nav {
         line-height: 23px;
     }
       .text_stardescontos p{
-       font-size: 1rem;
+       font-size: 0.8rem;
     }
 }
 @media (max-width:319px){
@@ -194,6 +194,6 @@ nav {
         line-height: 23px;
     }
       .text_stardescontos p{
-       font-size: 0.8rem;
+       font-size: 0.6rem;
     }
 }
