@@ -173,6 +173,8 @@
         gap: 30px;
     }
     .filtro_area_aberto{
+        display: none;
+        padding: 10px;
        position: absolute;
        z-index: 1;
        width: 80%;

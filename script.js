@@ -12,3 +12,12 @@ menu.addEventListener("click", () => {
     }
 })
 
+function btn(){
+
+    let button = document.querySelector("button")
+    switch(button){
+        case 'cidade':
+            filtro_area_aberto.style.diplay = "flex"
+            break
+    }
+}
