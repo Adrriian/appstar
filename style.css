@@ -38,7 +38,10 @@ button{
     }
 
 @media(min-width:768px) and (max-width:1023px){
-
+    main{
+        display: flex;
+        flex-direction: column;
+    }
     header{
         padding: 10px 0 10px 0;
         background-color: var(--bg-color1);
