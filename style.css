@@ -51,6 +51,16 @@ button{
     main{
         display: flex;
         flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .hidden{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        height: 0;
+        overflow: hidden;
     }
 @media(min-width:768px) and (max-width:1023px){
 
@@ -64,12 +74,19 @@ button{
         align-items: center;
         justify-content: center;
     }
-    .menu{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+    .menu_area{
+        display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 6vh 94vh;
+        align-items: flex-start;
+        justify-items: center;
         width: 100%;
-        gap: 15px;
+        height: 6vh;
+        overflow: hidden;
+        transition: all 1s ease;
+    }
+    .menu{
+        width: 100%;
     }
     .menu_mobile_bar{
         display: flex;
@@ -84,17 +101,16 @@ button{
         width: 2rem;
         height: 3px;
     }
-    .menu_mobile{
-        box-sizing: border-box;
-        height: 90vh;
+    .menu_mobile {
         background-color: var(--bg-color1);
-        display: none;
         flex-direction: column;
         align-items: center;
         gap:30px;
         color: var(--bg-color3);
         padding: 15px;
-        position: relative;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        transition: all 1s ease;
     }
     .menu_mobile ul li{
         font-size:1,5rem;
