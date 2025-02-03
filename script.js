@@ -12,12 +12,11 @@ menu.addEventListener("click", () => {
     }
 })
 
-function btn(){
-
-    let button = document.querySelector("button")
+function btn(button){
+    let filtrof = document.querySelector(".filtro_area_aberto");
     switch(button){
         case 'cidade':
-            filtro_area_aberto.style.diplay = "flex"
+                filtrof.style.display = 'flex'
             break
     }
 }
