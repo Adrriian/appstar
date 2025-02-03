@@ -18,5 +18,7 @@ function btn(button){
         case 'cidade':
             filtrof.style.display = 'flex'
         break
+        case 'filtrar':
+            filtrof.style.display = 'none'
     }
 }
