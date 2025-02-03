@@ -257,6 +257,7 @@
         width: 40vw;
         height: 85vh;
         background-color: var(--bg-color3);
+        border: 2px solid var(--bg-color2);
      }
      .area_content_return{
         width: 100%;
@@ -275,6 +276,7 @@
      .area_content_img {
         width: 100%;
         text-align: center;
+        border-bottom: 2px solid var(--bg-color2);
      }
      .area_content_img img {
         margin-left: 20px;
