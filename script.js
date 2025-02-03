@@ -1,13 +1,14 @@
 let menu = document.querySelector(".menu_mobile_bar")
 menu.addEventListener("click", () => {
     let content = document.querySelector("main")
-    let menu_m = document.querySelector(".menu_mobile")
+    let menu_m = document.querySelector(".menu_area")
 
-    if(menu_m.style.display == "flex"){
-        content.style.display= 'flex'
-        menu_m.style.display = 'none'
+    if(menu_m.style.height == "100vh" ){
+        menu_m.style.height = "6vh"
+        content.classList.remove('hidden')
     } else{
-        content.style.display = 'none'
-        menu_m.style.display = 'flex'
+        menu_m.style.height = "100vh"
+        content.classList.toggle('hidden')
     }
 })
+
