@@ -22,7 +22,7 @@ function btn(button){
             filtrof.style.display = 'none'
     }
 }
-let btns = document.querySelector('.area_conteudo')
+
 
 function btns(button){
     let lojas = document.querySelector(".modalc");
