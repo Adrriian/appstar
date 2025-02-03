@@ -36,6 +36,7 @@ function btns2(){
             lojas.style.display = 'flex'
         break;
         case 'Nome: Esquina':
+            lojas.style.display = 'flex'
             lojas.style.background = 'blue'
         break;
     }
