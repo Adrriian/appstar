@@ -34,6 +34,9 @@ function btns2(){
     switch(esc){
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex'
-            break;
+        break;
+        case 'Nome: Esquina':
+            lojas.style.background = 'blue'
+        break;
     }
 }
