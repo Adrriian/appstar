@@ -29,7 +29,7 @@ btns.addEventListener("click", btns2)
 function btns2(){
     let lojas = document.querySelector(".modalc");
     let fechar = document.querySelector(".fechar_modal")
-    let esc = document.querySelector(".p").value;
+    let esc = document.querySelector(".p").textContent;
 
     switch(esc){
         case 'Nome: Aj venturi':
