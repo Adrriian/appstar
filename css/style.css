@@ -249,6 +249,9 @@
         align-items: center;
         flex-direction: column;
      }
+     .area_content_open{
+        background-color: var(--bg-color3);
+     }
      .area_contet_img img,
      .area_content_return img {
         width: 100px;
