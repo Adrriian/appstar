@@ -31,6 +31,7 @@
      border: none;
      padding: 10px;
      width: 60%;
+     margin: auto;
  }
 
  .sb {
@@ -221,7 +222,7 @@
          color: var(--bg-color2);
          margin-left: 10px;
      }
-
+     
      .sb {
          border-bottom: 0;
          margin-bottom: 0;
