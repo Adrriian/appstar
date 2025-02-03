@@ -190,8 +190,8 @@
        border: 1px solid var(--bg-color2);
         }
 
-        .filtro_cidade,
-        .filtro_estabelecimento{
+        .filtro_cidade_text,
+        .filtro_estabelecimento_text{
             display: grid;
             grid-template-columns: 1fr;
             grid-row: 2fr;
