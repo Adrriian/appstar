@@ -78,6 +78,11 @@
      color: var(--bg-color2: #ff5900);
  }
 
+ li a{
+     text-decoration: none;
+     color: var(--bg-color2: #ff5900);
+ }
+
  .fm h1 {
      font-size: 1.7rem;
  }
