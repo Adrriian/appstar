@@ -72,7 +72,10 @@
      height: 0;
      overflow: hidden;
  }
-
+ button a{
+  text-decoration: none;
+     color: #fff;
+ }
  a {
      text-decoration: none;
      color: #fff;
