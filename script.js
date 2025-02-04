@@ -23,7 +23,7 @@ function btn(button){
     }
 }
 
-let btns = document.querySelectorAll(".area_conteudo")
+let btns = document.querySelector(".area_conteudo")
 btns.addEventListener("click", btns2)
 
 function btns2(){
