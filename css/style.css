@@ -1074,8 +1074,8 @@
             align-items: center;
             flex-direction: column;
          }
-         .area_content_open h1{
-            font-size: 0.7rem;
+         .area_content_open h1, li{
+            font-size: 0.9rem;
          }
          .area_content_open{
             display: flex;
