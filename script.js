@@ -43,13 +43,22 @@ function btns2() {
     switch (esc) {
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex';
-            name.textContent = "Aj venturi"
-            rua.textContent = "Henrique Bichels N: 232"
-            bairro.textContent = "centro"
-            midia.appendChild.innerHTML = <img src="img/logos/aj.png" width="35px"/>;
+            name.textContent = "Aj Venturi";
+            rua.textContent = "Henrique Bichels N: 232";
+            bairro.textContent = "Centro";
+            
+            // Criando o elemento de imagem e adicionando corretamente
+            let img = document.createElement("img");
+            img.src = "img/logos/aj.png";
+            img.width = 35; // ou img.style.width = "35px";
+            midia.appendChild(img);  // Adicionando o elemento img à variável midia
+            
             phones.textContent = "(47) 991967337";
-            produtos.innerHTML = <li>Remedios Genericos</li>,<li>Perfumaria</li>,<li>Vitaminas</li>;
-            break;  // Corrigido para parar após o primeiro caso
+            
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
+        break;
+
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
             name.textContent = "Esquina"
