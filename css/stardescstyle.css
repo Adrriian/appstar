@@ -1,60 +1,62 @@
 /*gerais*/
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-size: 1rem;
-     font-family: Inter, serif;
-     font-weight: bold;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Inter, serif;
+    font-weight: bold;
+}
 
- :root {
-     --bg-color1: #222e5a;
-     --bg-color2: #ff5900;
-     --bg-color3: #fff;
- }
+:root {
+    --bg-color1: #222e5a;
+    --bg-color2: #ff5900;
+    --bg-color3: #fff;
+}
 
- .conteiner {
-     width: 100%;
- }
+.conteiner {
+    width: 100%;
+}
 
- .conteiner_conteudo {
-     width: 80vw;
-     margin: auto;
- }
+.conteiner_conteudo {
+    width: 80vw;
+    margin: auto;
+}
 
- button {
-     background-color: var(--bg-color1);
-     color: var(--bg-color2);
-     text-align: center;
-     border-radius: 10px;
-     border: none;
-     padding: 10px;
-     width: 60%;
- }
+button {
+    background-color: var(--bg-color1);
+    color: var(--bg-color2);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 60%;
+}
 
-     .button_cadastro {
-         text-align: center;
-         margin-top: 20px;
-     }
- .fm h1 {
-         font-size: 1.7rem;
-     }
- .sb {
-     border-bottom: 0;
-     margin-bottom: 0;
- }
+.button_cadastro {
+    text-align: center;
+    margin-top: 20px;
+}
 
- .sm {
-     margin-top: 0;
- }
+.fm h1 {
+    font-size: 1.7rem;
+}
 
- .menu_mobile_seta img {
-     width: 45px;
-     object-fit: contain;
-     border-radius: 100px;
-     margin-left: 30px;
- }
+.sb {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.sm {
+    margin-top: 0;
+}
+
+.menu_mobile_seta img {
+    width: 45px;
+    object-fit: contain;
+    border-radius: 100px;
+    margin-left: 30px;
+}
 
 header {
     padding: 10px 0 10px 0;
@@ -67,6 +69,7 @@ nav {
     align-items: center;
     justify-content: center;
 }
+
 .menu_area {
     display: grid;
     grid-template-columns: 10% 90%;
@@ -78,29 +81,33 @@ nav {
     overflow: hidden;
     transition: all 1s ease;
 }
+
 .menu {
     width: 100%;
 }
 
-     .text_menu {
-         width: 100%;
-         text-align: center;
-     }
-.text_stardescontos {
-         margin-top: 20px;
-         color: var(--bg-color1);
-         text-align: justify;
-         line-height: 36px;
-     }
+.text_menu {
+    width: 100%;
+    text-align: center;
+}
 
-     .text_menu h1 {
-         color: var(--bg-color2);
-         font-size: 2rem;
-     }
-@media (min-width:768px) and (max-width:1024px){
+.text_stardescontos {
+    margin-top: 20px;
+    color: var(--bg-color1);
+    text-align: justify;
+    line-height: 36px;
+}
+
+.text_menu h1 {
+    color: var(--bg-color2);
+    font-size: 2rem;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
     .fm h1 {
         font-size: 1.5rem;
     }
+
     .menu_area {
         display: grid;
         grid-template-columns: 10% 90%;
@@ -112,20 +119,24 @@ nav {
         overflow: hidden;
         transition: all 1s ease;
     }
+
     .text_stardescontos {
         margin-top: 20px;
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
     }
-      .text_stardescontos p{
-       font-size: 1rem;
+
+    .text_stardescontos p {
+        font-size: 1rem;
     }
 }
-@media (min-width:425px) and (max-width:767px){
+
+@media (min-width:425px) and (max-width:767px) {
     .fm h1 {
         font-size: 1rem;
     }
+
     .menu_area {
         display: grid;
         grid-template-columns: 10% 90%;
@@ -137,20 +148,24 @@ nav {
         overflow: hidden;
         transition: all 1s ease;
     }
+
     .text_stardescontos {
         margin-top: 20px;
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
     }
-      .text_stardescontos p{
-       font-size: 1rem;
+
+    .text_stardescontos p {
+        font-size: 1rem;
     }
 }
-@media (min-width:320px) and (max-width:424px){
+
+@media (min-width:320px) and (max-width:424px) {
     .fm h1 {
         font-size: 1rem;
     }
+
     .menu_area {
         display: grid;
         grid-template-columns: 10% 90%;
@@ -162,20 +177,24 @@ nav {
         overflow: hidden;
         transition: all 1s ease;
     }
+
     .text_stardescontos {
         margin-top: 20px;
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
     }
-      .text_stardescontos p{
-       font-size: 0.8rem;
+
+    .text_stardescontos p {
+        font-size: 0.8rem;
     }
 }
-@media (max-width:319px){
+
+@media (max-width:319px) {
     .fm h1 {
         font-size: 1rem;
     }
+
     .menu_area {
         display: grid;
         grid-template-columns: 10% 90%;
@@ -187,13 +206,15 @@ nav {
         overflow: hidden;
         transition: all 1s ease;
     }
+
     .text_stardescontos {
         margin-top: 20px;
         color: var(--bg-color1);
         text-align: justify;
         line-height: 23px;
     }
-      .text_stardescontos p{
-       font-size: 0.6rem;
+
+    .text_stardescontos p {
+        font-size: 0.6rem;
     }
 }

@@ -3,21 +3,21 @@ menu.addEventListener("click", () => {
     let content = document.querySelector("main")
     let menu_m = document.querySelector(".menu_area")
 
-    if(menu_m.style.height == "100vh" ){
+    if (menu_m.style.height == "100vh") {
         menu_m.style.height = "6vh"
         content.classList.remove('hidden')
-    } else{
+    } else {
         menu_m.style.height = "100vh"
         content.classList.toggle('hidden')
     }
 })
 
-function btn(button){
+function btn(button) {
     let filtrof = document.querySelector(".modalf");
-    switch(button){
+    switch (button) {
         case 'cidade':
             filtrof.style.display = 'flex'
-        break
+            break
         case 'filtrar':
             filtrof.style.display = 'none'
     }
@@ -26,16 +26,16 @@ function btn(button){
 let btns = document.querySelectorAll(".area_conteudo");
 
 // Adicionando evento de clique em cada um dos elementos
-btns.forEach(function btn(btns){
+btns.forEach(function btn(btns) {
     btns.addEventListener("click", btns2)
 })
 
 function btns2() {
-    let name = document.querySelector(".name"); 
-    let rua = document.querySelector(".rua"); 
-    let bairro = document.querySelector(".bairro"); 
+    let name = document.querySelector(".name");
+    let rua = document.querySelector(".rua");
+    let bairro = document.querySelector(".bairro");
     let phones = document.querySelector(".phones");
-    let produtos = document.querySelector(".produtos") 
+    let produtos = document.querySelector(".produtos")
     let midia = document.querySelector(".links")
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
@@ -45,13 +45,13 @@ function btns2() {
             lojas.style.display = 'flex';
             name.textContent = "Aj Venturi";
             rua.textContent = "Henrique Bichels N: 232";
-            bairro.textContent = "Centro";      
+            bairro.textContent = "Centro";
             // Criando o elemento de imagem e adicionando corretamente
-            midia.href = 
-            phones.textContent = "(47) 991967337";
+            midia.href =
+                phones.textContent = "(47) 991967337";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
-        break;
+            break;
 
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
@@ -69,6 +69,6 @@ function btns2() {
 
 }
 let fecharModal = document.querySelector(".fechar_modal");
-fecharModal.addEventListener("click", function() {
+fecharModal.addEventListener("click", function () {
     document.querySelector(".modalc").style.display = 'none';
 });
