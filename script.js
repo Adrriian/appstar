@@ -23,7 +23,7 @@ function btn(button){
     }
 }
 
-let btns = document.querySelector(".area_conteudo")
+let btns = document.querySelectorAll(".area_conteudo")
 btns.addEventListener("click", btns2)
 
 function btns2(){
@@ -31,11 +31,14 @@ function btns2(){
     let fechar = document.querySelector(".fechar_modal")
     let esc = document.querySelector(".p").textContent;
 
-    switch(esc){
+    switch (esc) {
         case 'Nome: Aj venturi':
-            lojas.style.display = 'flex'
+            lojas.style.display = 'flex';
+            break;  // Corrigido para parar após o primeiro caso
         case 'Nome: Esquina':
-            lojas.style.display = 'flex'
-        break;
+            lojas.style.display = 'flex';
+            break;  // Corrigido para parar após o segundo caso
+        default:
+            break;  // Adicionando default para casos não previstos
     }
 }
