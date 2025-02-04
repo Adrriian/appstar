@@ -58,7 +58,7 @@ function btns2() {
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
             bairro.textContent = "Centro";
-            midia.href =     ;
+            midia.href = "";
             phones.textContent = "(47) 997508905";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
