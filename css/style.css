@@ -254,7 +254,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        width: 40vw;
+        width: 37vw;
         height: 85vh;
         background-color: var(--bg-color3);
         border: 2px solid var(--bg-color2);
@@ -501,7 +501,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            width: 80vw;
+            width: 66vw;
             height: 85vh;
             background-color: var(--bg-color3);
             border: 2px solid var(--bg-color2);
@@ -799,7 +799,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            width: 80vw;
+            width: 77vw;
             height: 85vh;
             background-color: var(--bg-color3);
             border: 2px solid var(--bg-color2);
@@ -1095,7 +1095,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            width: 92vw;
+            width: 85vw;
             height: 85vh;
             background-color: var(--bg-color3);
             border: 2px solid var(--bg-color2);
