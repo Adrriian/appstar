@@ -270,6 +270,7 @@
      .area_content_return img{
         margin-left: 30px;
         width: 45px;
+        height: 12px;
      }
      .area_content_return h1{
         color: var(--bg-color2);
@@ -509,7 +510,9 @@
             background-color: var(--bg-color1);
          }
          .area_content_return img{
+            margin-left: 30px;
             width: 45px;
+            height: 12px;
          }
          .area_content_return h1{
             color: var(--bg-color2);
@@ -529,38 +532,49 @@
          }
          .area_content_name{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 70px 1fr;
             align-items: center;
             justify-content: center;
+            margin: 5px 0 5px 0;
          }
+         .content_endereço_title,
+         .content_endereço_body,
+         .midia,
+         .phone{
+            margin-bottom: 5px;
+         }
+    
          .area_content_comunication{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 112px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 80px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_descont{
+            
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            gap:5px;
          }
          .content_endereço_body{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 70px 1fr;
+            gap:5px;
          }
      .area {
          border: 1px solid var(--bg-color2);
@@ -788,7 +802,9 @@
             background-color: var(--bg-color1);
          }
          .area_content_return img{
+            margin-left: 30px;
             width: 45px;
+            height: 12px;
          }
          .area_content_return h1{
             color: var(--bg-color2);
@@ -808,38 +824,49 @@
          }
          .area_content_name{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 70px 1fr;
             align-items: center;
             justify-content: center;
+            margin: 5px 0 5px 0;
          }
+         .content_endereço_title,
+         .content_endereço_body,
+         .midia,
+         .phone{
+            margin-bottom: 5px;
+         }
+    
          .area_content_comunication{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 112px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 80px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_descont{
+            
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            gap:5px;
          }
          .content_endereço_body{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 70px 1fr;
+            gap:5px;
          }
      .area {
          border: 1px solid var(--bg-color2);
@@ -1061,7 +1088,9 @@
             background-color: var(--bg-color1);
          }
          .area_content_return img{
+            margin-left: 30px;
             width: 45px;
+            height: 12px;
          }
          .area_content_return h1{
             color: var(--bg-color2);
@@ -1081,38 +1110,49 @@
          }
          .area_content_name{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 70px 1fr;
             align-items: center;
             justify-content: center;
+            margin: 5px 0 5px 0;
          }
+         .content_endereço_title,
+         .content_endereço_body,
+         .midia,
+         .phone{
+            margin-bottom: 5px;
+         }
+    
          .area_content_comunication{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 112px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 80px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_descont{
+            
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            gap:5px;
          }
          .content_endereço_body{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 70px 1fr;
+            gap:5px;
          }
      .area {
          border: 1px solid var(--bg-color2);
@@ -1353,7 +1393,9 @@
             background-color: var(--bg-color1);
          }
          .area_content_return img{
+            margin-left: 30px;
             width: 45px;
+            height: 12px;
          }
          .area_content_return h1{
             color: var(--bg-color2);
@@ -1373,38 +1415,49 @@
          }
          .area_content_name{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 70px 1fr;
             align-items: center;
             justify-content: center;
+            margin: 5px 0 5px 0;
          }
+         .content_endereço_title,
+         .content_endereço_body,
+         .midia,
+         .phone{
+            margin-bottom: 5px;
+         }
+    
          .area_content_comunication{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 112px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
             display:grid;
-            grid-template-columns: 100px 1fr;
+            grid-template-columns: 80px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_descont{
+            
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            gap:5px;
          }
          .content_endereço_body{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 70px 1fr;
+            gap:5px;
          }
      .area {
          border: 1px solid var(--bg-color2);
