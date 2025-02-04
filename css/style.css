@@ -287,23 +287,27 @@
         color:var(--bg-color1);
      }
      .area_content_name{
-        display: flex;
+        display:grid;
+        grid-template-columns: 100px 1fr;
         align-items: center;
         justify-content: center;
      }
      .area_content_comunication{
-        display: flex;
+        display:grid;
+        grid-template-columns: 100px 1fr;
         flex-direction: column;
         align-items: center;
         justify-content: center;
      }
      .midia{
-        display: flex;
+        display:grid;
+        grid-template-columns: 100px 1fr;
         align-items: center;
         justify-content: center;
      }
      .phone{
-        display: flex;
+        display:grid;
+        grid-template-columns: 100px 1fr;
         align-items: center;
         justify-content: center;
      }
@@ -512,23 +516,27 @@
             color:var(--bg-color1);
          }
          .area_content_name{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_comunication{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
@@ -787,23 +795,27 @@
             color:var(--bg-color1);
          }
          .area_content_name{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_comunication{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
@@ -1056,23 +1068,27 @@
             color:var(--bg-color1);
          }
          .area_content_name{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_comunication{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
@@ -1344,23 +1360,27 @@
             color:var(--bg-color1);
          }
          .area_content_name{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .area_content_comunication{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             flex-direction: column;
             align-items: center;
             justify-content: center;
          }
          .midia{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
          .phone{
-            display: flex;
+            display:grid;
+            grid-template-columns: 100px 1fr;
             align-items: center;
             justify-content: center;
          }
