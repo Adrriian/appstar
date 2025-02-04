@@ -45,23 +45,25 @@ function btns2() {
             lojas.style.display = 'flex';
             name.textContent = "Aj Venturi";
             rua.textContent = "Henrique Bichels N: 232";
-            bairro.textContent = "Centro";
-            
+            bairro.textContent = "Centro";      
             // Criando o elemento de imagem e adicionando corretamente
             let img = document.createElement("img");
             img.src = "img/logos/aj.png";
             img.width = 35; // ou img.style.width = "35px";
-            midia.appendChild(img);  // Adicionando o elemento img à variável midia
-            
+            midia.appendChild(img);  // Adicionando o elemento img à variável midia          
             phones.textContent = "(47) 991967337";
-            
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
         break;
 
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
-            name.textContent = "Esquina"
+            name.textContent = "Esquina";
+            rua.textContent = "Jorge lacerda N: 21";
+            bairro.textContent = "Centro";              
+            phones.textContent = "(47) 997508905";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
             break;  // Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos
