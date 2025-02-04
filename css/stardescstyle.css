@@ -32,7 +32,10 @@ button {
     padding: 10px;
     width: 60%;
 }
-
+ button a{
+  text-decoration: none;
+     color: #fff;
+ }
 .button_cadastro {
     text-align: center;
     margin-top: 20px;
