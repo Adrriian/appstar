@@ -91,12 +91,12 @@
  label {
      margin: 5px;
  }
- .btnw a{
+  *a {
   text-decoration: none;
   color: var(--bg-color2: #ff5900);
  }
  @media(min-width:768px) and (max-width:1023px) {
-
+  
      header {
          padding: 10px 0 10px 0;
          background-color: var(--bg-color1);
@@ -403,7 +403,7 @@
  }
 
  @media(min-width:425px) and (max-width:767px) {
-
+   
      header {
          padding: 10px 0 10px 0;
          background-color: var(--bg-color1);
