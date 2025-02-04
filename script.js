@@ -74,7 +74,7 @@ function btns2() {
             
              case 'Nome: Doce Delicia':
             lojas.style.display = 'flex';
-            img.src = "img/logos/"
+            img.src = "img/logos/docedelicia.jpg"
             img.alt = "Logo do Food Truck Doce Delicia"
             imgf.style.background = "black"
             name.textContent = "Doce Delicia";
