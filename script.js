@@ -58,7 +58,7 @@ function btns2() {
 
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
-            img.src = "img/logos/esquina.png"
+            img.src = "img/logos/esquina.jpg"
             img.alt = "Logo da lanchonete esquina"
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
