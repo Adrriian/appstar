@@ -31,6 +31,7 @@ btns.forEach(function btn(btns) {
 })
 
 function btns2() {
+    let img = document.querySelector(".img_troca")
     let name = document.querySelector(".name");
     let rua = document.querySelector(".rua");
     let bairro = document.querySelector(".bairro");
@@ -43,6 +44,8 @@ function btns2() {
     switch (esc) {
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex';
+            img.src = "img/logos/aj.png"
+            img.alt = "Logo da farmacia aj venturi"
             name.textContent = "Aj Venturi";
             rua.textContent = "Henrique Bichels N: 232";
             bairro.textContent = "Centro";
@@ -55,6 +58,8 @@ function btns2() {
 
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
+            img.src = "img/logos/esquina.png"
+            img.alt = "Logo da lanchonete esquina"
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
             bairro.textContent = "Centro";
