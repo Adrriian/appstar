@@ -1074,7 +1074,7 @@
             align-items: center;
             flex-direction: column;
          }
-         .area_content_open > h1{
+         .area_content_open h1{
             font-size: 0.7rem;
          }
          .area_content_open{
