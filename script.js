@@ -23,7 +23,7 @@ function btn(button){
     }
 }
 
-let btns = document.querySelector(".area_conteudo");
+let btns = document.querySelectorAll(".area_conteudo");
 
 // Adicionando evento de clique em cada um dos elementos
 
