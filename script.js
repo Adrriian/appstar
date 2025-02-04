@@ -23,12 +23,10 @@ function btn(button){
     }
 }
 
-let btns = document.querySelectorAll(".area_conteudo");
+let btns = document.querySelector(".area_conteudo");
 
 // Adicionando evento de clique em cada um dos elementos
-btns.forEach(function(btn) {
-    btn.addEventListener("click", btns2);
-});
+
 
 function btns2() {
     let lojas = document.querySelector(".modalc");
