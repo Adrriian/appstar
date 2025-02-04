@@ -293,9 +293,9 @@
         justify-content: center;
         margin: 5px 0 5px 0;
      }
-     .content_endereco_title,
+     .content_endereço_title,
      .content_endereço_body,
-     .mida,
+     .midia,
      .phone{
         margin-bottom: 5px;
      }
@@ -330,6 +330,7 @@
      .content_endereço_body{
         display: grid;
         grid-template-columns: 70px 1fr;
+        gap:5px;
      }
      .sb {
          border-bottom: 0;
