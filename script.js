@@ -47,6 +47,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/aj.png"
             img.alt = "Logo da farmacia aj venturi"
+            imgf.style.background = "white"
             name.textContent = "Aj Venturi";
             rua.textContent = "Henrique Bichels N: 232";
             bairro.textContent = "Centro";
