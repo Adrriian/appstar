@@ -31,7 +31,12 @@ btns.forEach(function btn(btns){
 })
 
 function btns2() {
-    let name = document.querySelector(".name");  // Captura o texto da área clicada
+    let name = document.querySelector(".name"); 
+    let rua = document.querySelector(".rua"); 
+    let bairro = document.querySelector(".bairro"); 
+    let phones = document.querySelector(".bairro");
+    let produtos = document.querySelector(".produtos") 
+    let midia = document.querySelector(".midia")
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
 
@@ -39,6 +44,11 @@ function btns2() {
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex';
             name.textContent = "Aj venturi"
+            rua.textContent = "Henrique Bichels N: 232"
+            bairro.textContent = "centro"
+            midia.appendChild.innerHTML = <img src="img/logos/aj.png" width="35px"/>;
+            phones.textContent = "(47) 991967337";
+            produtos.innerHTML = <li>Remedios Genericos</li>,<li>Perfumaria</li>,<li>Vitaminas</li>;
             break;  // Corrigido para parar após o primeiro caso
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
