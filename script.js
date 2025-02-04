@@ -33,6 +33,7 @@ btns.forEach(function btn(btns){
 function btns2() {
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
+    let name = this.querySelector(".name").textContent;  // Captura o texto da área clicada
 
     switch (esc) {
         case 'Nome: Aj venturi':
