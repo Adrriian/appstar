@@ -13,7 +13,7 @@ menu.addEventListener("click", () => {
 })
 
 function btn(button){
-    let filtrof = document.querySelector(".modal");
+    let filtrof = document.querySelector(".modalf");
     switch(button){
         case 'cidade':
             filtrof.style.display = 'flex'
