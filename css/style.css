@@ -327,10 +327,13 @@
      }
 
      .midia {
-         display: grid;
-         grid-template-columns: 112px 1fr;
+         display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: flex-start;
+     }
+
+     .links {
+         margin-left: 10px;
      }
 
      .phone {
@@ -594,10 +597,13 @@
      }
 
      .midia {
-         display: grid;
-         grid-template-columns: 112px 1fr;
+         display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: flex-start;
+     }
+
+     .links {
+         margin-left: 10px;
      }
 
      .phone {
@@ -910,10 +916,13 @@
      }
 
      .midia {
-         display: grid;
-         grid-template-columns: 112px 1fr;
+         display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: flex-start;
+     }
+
+     .links {
+         margin-left: 10px;
      }
 
      .phone {
@@ -1225,10 +1234,13 @@
      }
 
      .midia {
-         display: grid;
-         grid-template-columns: 112px 1fr;
+         display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: flex-start;
+     }
+
+     .links {
+         margin-left: 10px;
      }
 
      .phone {
@@ -1552,10 +1564,13 @@
      }
 
      .midia {
-         display: grid;
-         grid-template-columns: 112px 1fr;
+         display: flex;
          align-items: center;
-         justify-content: center;
+         justify-content: flex-start;
+     }
+
+     .links {
+         margin-left: 10px;
      }
 
      .phone {
