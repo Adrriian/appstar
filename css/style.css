@@ -91,7 +91,10 @@
  label {
      margin: 5px;
  }
-
+ .btnw a{
+  text-decoration: none;
+  color: var(--bg-color2: #ff5900);
+ }
  @media(min-width:768px) and (max-width:1023px) {
 
      header {
