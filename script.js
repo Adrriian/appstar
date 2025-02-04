@@ -34,7 +34,7 @@ function btns2() {
     let name = document.querySelector(".name"); 
     let rua = document.querySelector(".rua"); 
     let bairro = document.querySelector(".bairro"); 
-    let phones = document.querySelector(".bairro");
+    let phones = document.querySelector(".phone");
     let produtos = document.querySelector(".produtos") 
     let midia = document.querySelector(".midia")
     let lojas = document.querySelector(".modalc");
