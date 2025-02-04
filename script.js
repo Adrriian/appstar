@@ -24,7 +24,7 @@ function btn(button){
 }
 
 let btns = document.querySelectorAll(".area_conteudo");
-
+btns.addEventListener("click", btns2)
 // Adicionando evento de clique em cada um dos elementos
 
 
