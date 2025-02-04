@@ -52,7 +52,7 @@ function btns2() {
             rua.textContent = "Henrique Bichels N: 232";
             bairro.textContent = "Centro";
             // Criando o elemento de imagem e adicionando corretamente
-            midia.href =
+            midia.href = "https://www.instagram.com/farmacia_ajventuri?igsh=MXBnaG4xYnFuMWhmZg==";
                 phones.textContent = "(47) 991967337";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
@@ -66,7 +66,7 @@ function btns2() {
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
             bairro.textContent = "Centro";
-            midia.href = "";
+            midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
             phones.textContent = "(47) 997508905";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
