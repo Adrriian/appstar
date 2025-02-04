@@ -76,7 +76,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/docedelicia.jpg"
             img.alt = "Logo do Food Truck Doce Delicia"
-            imgf.style.background = "black"
+            imgf.style.background = "white"
             name.textContent = "Doce Delicia";
             rua.textContent = "Rodovia Bruno Heidrich N:S/N Proximo A Rodhen Vidros";
             bairro.textContent = "Br 470";
