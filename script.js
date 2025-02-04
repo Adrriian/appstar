@@ -23,13 +23,16 @@ function btn(button){
     }
 }
 
-let btns = document.querySelector(".area_conteudo")
-btns.addEventListener("click", btns2)
+let btns = document.querySelectorAll(".area_conteudo");
 
-function btns2(){
+// Adicionando evento de clique em cada um dos elementos
+btns.forEach(function(btn) {
+    btn.addEventListener("click", btns2);
+});
+
+function btns2() {
     let lojas = document.querySelector(".modalc");
-    let fechar = document.querySelector(".fechar_modal")
-    let esc = document.querySelector(".p").textContent;
+    let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
 
     switch (esc) {
         case 'Nome: Aj venturi':
@@ -41,4 +44,5 @@ function btns2(){
         default:
             break;  // Adicionando default para casos não previstos
     }
+
 }
