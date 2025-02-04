@@ -363,6 +363,10 @@
          text-align: justify;
          line-height: 36px;
      }
+     .area_content_descont ul li{
+        list-style: none;
+        margin-left: 20px;
+     }
  }
 
  @media(min-width:425px) and (max-width:767px) {
@@ -642,6 +646,10 @@
          color: var(--bg-color1);
          text-align: justify;
          line-height: 23px;
+     }
+     .area_content_descont ul li{
+        list-style: none;
+        margin-left: 20px;
      }
 
  }
@@ -944,6 +952,10 @@
          text-align: justify;
          line-height: 20px;
      }
+     .area_content_descont ul li{
+        list-style: none;
+        margin-left: 20px;
+     }
  }
 
  @media(min-width:320px) and (max-width:374px) {
@@ -1159,7 +1171,8 @@
             justify-content: center;
             gap:5px;
          }
-         .area_content_descont ul{
+         .area_content_descont ul li{
+            list-style: none;
             margin-left: 20px;
          }
          .content_endereço_body{
