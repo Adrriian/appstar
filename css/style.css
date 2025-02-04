@@ -309,13 +309,13 @@
      }
      .midia{
         display:grid;
-        grid-template-columns: 106px 1fr;
+        grid-template-columns: 112px 1fr;
         align-items: center;
         justify-content: center;
      }
      .phone{
         display:grid;
-        grid-template-columns: 70px 1fr;
+        grid-template-columns: 80px 1fr;
         align-items: center;
         justify-content: center;
      }
