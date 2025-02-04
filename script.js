@@ -42,7 +42,7 @@ function btns2() {
             break;  // Corrigido para parar após o primeiro caso
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
-            name.textContent = "Aj venturi"
+            name.textContent = "Esquina"
             break;  // Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos
