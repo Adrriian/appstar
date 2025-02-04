@@ -48,5 +48,5 @@ function btns2() {
 }
 let fecharModal = document.querySelector(".fechar_modal");
 fecharModal.addEventListener("click", function() {
-    document.getElementById("conteudo").style.display = 'none';
+    document.querySelector(".modalc").style.display = 'none';
 });
