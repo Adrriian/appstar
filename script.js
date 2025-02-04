@@ -38,8 +38,9 @@ function btns2() {
     let bairro = document.querySelector(".bairro");
     let phones = document.querySelector(".phones");
     let produtos = document.querySelector(".produtos")
-    let midia = document.querySelector(".links")
-    let midias = document.querySelector(".links2")
+    let midia = document.querySelector(".links");
+    let midias = document.querySelector(".links2");
+    let btnw = document.querySelector(".btnw")
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
 
@@ -56,6 +57,7 @@ function btns2() {
             midia.href = "https://www.instagram.com/farmacia_ajventuri?igsh=MXBnaG4xYnFuMWhmZg==";
             midias.href = "https://wa.me/5547991967337";
             phones.textContent = "(47) 991967337";
+            btnw.href="https://wa.me/5547991967337";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
             break;
@@ -71,6 +73,7 @@ function btns2() {
             midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
             midias.href = "https://wa.me/5547997508905";
             phones.textContent = "(47) 997508905";
+            btnw.href="https://wa.me/5547997508905";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
             break;  // Corrigido para parar após o segundo caso
@@ -86,6 +89,7 @@ function btns2() {
             midia.href = "https://www.instagram.com/doce_deliciaaaa_?igsh=NWVoYXRjbWF4MTBp";
              midias.href = "https://wa.me/5547992897078";
             phones.textContent = "(47) 992897078";
+            btnw.href="https://wa.me/5547992897078";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
             break;  // Corrigido para parar após o segundo caso
