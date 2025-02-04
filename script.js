@@ -71,6 +71,20 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
             break;  // Corrigido para parar após o segundo caso
+            
+             case 'Nome: Doce Delicia':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/"
+            img.alt = "Logo do Food Truck Doce Delicia"
+            imgf.style.background = "black"
+            name.textContent = "Doce Delicia";
+            rua.textContent = "Rodovia Bruno Heidrich N:S/N Proximo A Rodhen Vidros";
+            bairro.textContent = "Br 470";
+            midia.href = "https://www.instagram.com/doce_deliciaaaa_?igsh=NWVoYXRjbWF4MTBp";
+            phones.textContent = "(47) 992897078";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
+            break;  // Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos
     }
