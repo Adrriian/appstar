@@ -34,7 +34,6 @@ function btns2(){
     switch(esc){
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex'
-        break;
         case 'Nome: Esquina':
             lojas.style.display = 'flex'
         break;
