@@ -291,7 +291,15 @@
         grid-template-columns: 70px 1fr;
         align-items: center;
         justify-content: center;
+        margin: 5px 0 5px 0;
      }
+     .content_endereco_title,
+     .content_endereço_body,
+     .mida,
+     .phone{
+        margin-bottom: 5px;
+     }
+
      .area_content_comunication{
         display:grid;
         grid-template-columns: 1fr;
@@ -312,10 +320,12 @@
         justify-content: center;
      }
      .area_content_descont{
+        
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        gap:5px;
      }
      .content_endereço_body{
         display: grid;
