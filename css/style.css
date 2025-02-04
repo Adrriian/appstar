@@ -73,9 +73,9 @@
      overflow: hidden;
  }
 
- a * {
+ a{
      text-decoration: none;
-     color: var( --bg-color2: #ff5900);
+     color: var(--bg-color2: #ff5900);
  }
 
  .fm h1 {
