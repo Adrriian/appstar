@@ -31,15 +31,18 @@ btns.forEach(function btn(btns){
 })
 
 function btns2() {
+    let name = document.querySelector(".name");  // Captura o texto da área clicada
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
 
     switch (esc) {
         case 'Nome: Aj venturi':
             lojas.style.display = 'flex';
+            name.textContent = "Aj venturi"
             break;  // Corrigido para parar após o primeiro caso
         case 'Nome: Esquina':
             lojas.style.display = 'flex';
+            name.textContent = "Aj venturi"
             break;  // Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos
