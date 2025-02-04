@@ -32,6 +32,7 @@ btns.forEach(function btn(btns) {
 
 function btns2() {
     let img = document.querySelector(".img_troca")
+    let imgf = document.querySelector(".area_content_img")
     let name = document.querySelector(".name");
     let rua = document.querySelector(".rua");
     let bairro = document.querySelector(".bairro");
@@ -60,6 +61,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/esquina.jpg"
             img.alt = "Logo da lanchonete esquina"
+            imgf.style.background = "black"
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
             bairro.textContent = "Centro";
