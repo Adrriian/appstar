@@ -36,7 +36,7 @@ function btns2() {
     let bairro = document.querySelector(".bairro"); 
     let phones = document.querySelector(".phones");
     let produtos = document.querySelector(".produtos") 
-    let midia = document.querySelector(".midia")
+    let midia = document.querySelector(".links")
     let lojas = document.querySelector(".modalc");
     let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
 
@@ -47,10 +47,7 @@ function btns2() {
             rua.textContent = "Henrique Bichels N: 232";
             bairro.textContent = "Centro";      
             // Criando o elemento de imagem e adicionando corretamente
-            let img = document.createElement("img");
-            img.src = "img/logos/aj.png";
-            img.width = 35; // ou img.style.width = "35px";
-            midia.appendChild(img);  // Adicionando o elemento img à variável midia          
+            midia.href = 
             phones.textContent = "(47) 991967337";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
@@ -60,7 +57,8 @@ function btns2() {
             lojas.style.display = 'flex';
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
-            bairro.textContent = "Centro";              
+            bairro.textContent = "Centro";
+            midia.href =     ;
             phones.textContent = "(47) 997508905";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
