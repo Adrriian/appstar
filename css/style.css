@@ -288,38 +288,38 @@
      }
      .area_content_name{
         display:grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 70px 1fr;
         align-items: center;
         justify-content: center;
      }
      .area_content_comunication{
         display:grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 1fr;
         flex-direction: column;
         align-items: center;
         justify-content: center;
      }
      .midia{
         display:grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 70px 1fr;
         align-items: center;
         justify-content: center;
      }
      .phone{
         display:grid;
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 70px 1fr;
         align-items: center;
         justify-content: center;
      }
      .area_content_descont{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
      }
      .content_endereço_body{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 70px 1fr;
      }
      .sb {
          border-bottom: 0;
