@@ -33,7 +33,10 @@
      width: 60%;
      margin: auto;
  }
-
+button a{
+  text-decoration: none;
+     color: #ff5900;
+ }
  .sb {
      border-bottom: 0;
      margin-bottom: 0;
