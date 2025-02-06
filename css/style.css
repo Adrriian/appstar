@@ -22,7 +22,9 @@
      width: 80vw;
      margin: auto;
  }
-
+ .as{
+  display:none;
+ }
  button {
      background-color: var(--bg-color1);
      color: var(--bg-color2);
