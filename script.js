@@ -12,10 +12,7 @@ menu.addEventListener("click", () => {
     }
 })
 
-let btnn = document.querySelector(".mg")
-btnn.addEventeListener("click", btns3)
-
-function btns3() {
+function btnn() {
     
     let filtrof = document.querySelector(".modalf");
     switch (button) {
