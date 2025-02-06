@@ -12,8 +12,8 @@ menu.addEventListener("click", () => {
     }
 })
 
-let btn = document.querySelector(".mg")
-btn.addEventeListener("click", btns3)
+let btnn = document.querySelector(".mg")
+btnn.addEventeListener("click", btns3)
 
 function btns3() {
     
