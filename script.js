@@ -12,7 +12,9 @@ menu.addEventListener("click", () => {
     }
 })
 
-function btn(button) {
+let btn = document.querySelector(".mg")
+btn.addEventeListener("click", btns)
+function btns() {
     let filtrof = document.querySelector(".modalf");
     switch (button) {
         case 'cidade':
