@@ -403,7 +403,9 @@ button a{
 
      }
  }
-
+ .as{
+  display:none;
+ }
  @media(min-width:425px) and (max-width:767px) {
    
      header {
@@ -710,7 +712,9 @@ button a{
      }
 
  }
-
+ .as{
+  display:none;
+ }
  @media(min-width:375px) and (max-width:424px) {
 
      header {
@@ -1035,7 +1039,9 @@ button a{
 
      }
  }
-
+ .as{
+  display:none;
+ }
  @media(min-width:320px) and (max-width:374px) {
 
      header {
@@ -1372,7 +1378,9 @@ button a{
          font-size: 0.8rem;
      }
  }
-
+ .as{
+  display:none;
+ }
  @media (max-width:319px) {
 
      header {
@@ -1684,4 +1692,7 @@ button a{
      button {
          font-size: 0.8rem;
      }
+ }
+ .as{
+  display:none;
  }
