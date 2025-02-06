@@ -16,7 +16,7 @@ function btnn(button) {
     
     let filtrof = document.querySelector(".modalf");
     switch (button) {
-        case 'cidade':
+        case 'CIDADE':
             filtrof.style.display = 'flex'
             break
         case 'filtrar':
