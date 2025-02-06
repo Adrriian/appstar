@@ -12,14 +12,14 @@ menu.addEventListener("click", () => {
     }
 })
 
-function btnn(button) {
+function btnn() {
     
     let filtrof = document.querySelector(".modalf");
     switch (button) {
         case 'CIDADE':
             filtrof.style.display = 'flex'
             break
-        case 'filtrar':
+        case 'Filtrar':
             filtrof.style.display = 'none'
     }
 }
