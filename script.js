@@ -12,7 +12,7 @@ menu.addEventListener("click", () => {
     }
 })
 
-function btnn() {
+function btnn(button) {
     
     let filtrof = document.querySelector(".modalf");
     switch (button) {
