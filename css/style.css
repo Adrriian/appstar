@@ -258,10 +258,12 @@
          flex-direction: column;
          align-items: flex-start;
          justify-content: center;
-         gap: 15px;
          color: var(--bg-color2);
          margin-left: 10px;
      }
+     .area_text h1 {
+        margin: 5px 0 5px 0;
+    }
 
      .modalc {
          display: none;
@@ -683,14 +685,16 @@
      }
 
      .area_text {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         justify-content: center;
-         gap: 15px;
-         color: var(--bg-color2);
-         margin-left: 10px;
-     }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--bg-color2);
+        margin-left: 10px;
+    }
+    .area_text h1 {
+       margin: 5px 0 5px 0;
+   }
 
      .sb {
          border-bottom: 0;
@@ -1010,14 +1014,16 @@
      }
 
      .area_text {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         justify-content: center;
-         gap: 15px;
-         color: var(--bg-color2);
-         margin-left: 10px;
-     }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--bg-color2);
+        margin-left: 7px;
+    }
+    .area_text h1 {
+       margin: 5px 0 5px 0;
+   }
 
      .sb {
          border-bottom: 0;
@@ -1341,14 +1347,16 @@
      }
 
      .area_text {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         justify-content: center;
-         gap: 15px;
-         color: var(--bg-color2);
-         margin-left: 10px;
-     }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--bg-color2);
+        margin-left: 10px;
+    }
+    .area_text h1 {
+       margin: 5px 0 5px 0;
+   }
 
      .sb {
          border-bottom: 0;
@@ -1672,14 +1680,16 @@
      }
 
      .area_text {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         justify-content: center;
-         gap: 15px;
-         color: var(--bg-color2);
-         margin-left: 10px;
-     }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: var(--bg-color2);
+        margin-left: 10px;
+    }
+    .area_text h1 {
+       margin: 5px 0 5px 0;
+   }
 
      .sb {
          border-bottom: 0;
