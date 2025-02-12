@@ -14,16 +14,70 @@ menu.addEventListener("click", () => {
 })
 // function que para o filtro das cidades
 function btnn(button) {
+    // Obtém os rádios selecionados
+    let filtroc = document.querySelector('input[name="cidade"]:checked');
+    let filtroe = document.querySelector('input[name="estabelecimento"]:checked');
     
+    // Verifica se os rádios foram selecionados para evitar erro
+    let valorCidade = filtroc ? filtroc.value : "";
+    let valorEstabelecimento = filtroe ? filtroe.value : "";
+
+    // Obtém todas as divs dentro da div mãe .area_conteudo
+    let areaf = document.querySelectorAll('.area_conteudo');
+
+    // Função para filtrar as divs com base na cidade ou estabelecimento selecionado
+    function filtrar() {
+        areaf.forEach(function(divf) {
+            // Obtém os valores de 'data-cidade' e 'data-estabelecimento' para cada div
+            let filtroCidadeDiv = divf.querySelector('.cidadename') ? divf.querySelector('.cidadename').getAttribute('data-cidade') : "";
+            let filtroEstabelecimentoDiv = divf.querySelector('.tiponame') ? divf.querySelector('.tiponame').getAttribute('data-estabelecimento') : "";
+
+            // Verifica se a cidade ou estabelecimento da div corresponde ao valor do rádio selecionado
+            let cidadeMatch = valorCidade !== "" ? filtroCidadeDiv === valorCidade : true;
+            let estabelecimentoMatch = valorEstabelecimento !== "" ? filtroEstabelecimentoDiv === valorEstabelecimento : true;
+
+            // Exibe ou esconde a div com base na correspondência dos filtros
+            if (cidadeMatch && estabelecimentoMatch) {
+                divf.style.display = 'grid'; // Exibe a div com grid
+                divf.classList.remove('none'); // Remove a classe 'none', se existir
+            } else {
+                divf.style.display = 'none'; // Não exibe a div
+                divf.classList.add('none'); // Adiciona a classe 'none' à div
+            }
+        });
+    }
+
+    // Verifica qual botão foi pressionado
     let filtrof = document.querySelector(".modalf");
     switch (button) {
         case 'CIDADE':
-            filtrof.style.display = 'flex'
-            break
+            filtrof.style.display = 'flex'; // Exibe o filtro de cidade
+            break;
+            case 'Remover Filtro':
+                // Deseleciona os rádios de cidade e estabelecimento
+                let cidadesRadios = document.querySelectorAll('input[name="cidade"]');
+                let estabelecimentosRadios = document.querySelectorAll('input[name="estabelecimento"]');
+    
+                // Deseleciona todos os rádios
+                cidadesRadios.forEach(radio => radio.checked = false);
+                estabelecimentosRadios.forEach(radio => radio.checked = false);
+                areaf.forEach(function(divf) {
+                    divf.style.display = 'grid'; // Exibe todas as divs com grid
+                    divf.classList.remove('none'); // Remove a classe 'none', se houver
+                });
+    
+                // Fecha o filtro
+                filtrof.style.display = 'none'; // Fecha o filtro // Fecha o filtro após a aplicação
+        break;
         case 'Filtrar':
-            filtrof.style.display = 'none'
+            filtrar(); // Chama a função de filtragem quando o botão "Filtrar" for pressionado
+            filtrof.style.display = 'none'; // Fecha o filtro após a aplicação
+            break;
     }
 }
+
+
+
 
 // function refente a abrir e fechar o modal, onde aparece os dados individuais de cada empresa
 let btns = document.querySelectorAll(".area_conteudo");

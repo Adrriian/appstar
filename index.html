@@ -67,15 +67,15 @@
                                 </div>
                                 <div class="filtro_cidade_area">
                                     <div class="filtro_cidade">
-                                        <input type="radio" name="cidade">
+                                        <input type="radio" name="cidade" value="pousoredondo">
                                         <label>Pouso Redondo</label>
                                     </div>
                                     <div class="filtro_cidade">
-                                        <input type="radio" name="cidade">
+                                        <input type="radio" name="cidade" value="taio">
                                         <label>Taió</label>
                                     </div>
                                     <div class="filtro_cidade">
-                                        <input type="radio" name="cidade">
+                                        <input type="radio" name="cidade" value="agrolandia">
                                         <label>Agrolândia</label>
                                     </div>
                                 </div>
@@ -86,19 +86,20 @@
                                 </div>
                                 <div class="filtro_estabelecimento_area">
                                     <div class="filtro_estabelecimento">
-                                        <input type="radio" name="estabelecimento">
+                                        <input type="radio" name="estabelecimento" value="farmacia">
                                         <label>Farmacia</label>
                                     </div>
                                     <div class="filtro_estabelecimento">
-                                        <input type="radio" name="estabelecimento">
-                                        <label>lavação</label>
+                                        <input type="radio" name="estabelecimento" value="lanchonete">
+                                        <label>lachonete</label>
                                     </div>
                                     <div class="filtro_estabelecimento">
-                                        <input type="radio" name="estabelecimento">
+                                        <input type="radio" name="estabelecimento" value="postog">
                                         <label>Posto de Gasolina</label>
                                     </div>
                                 </div>
                             </div>
+                            <button class="mg" onclick="btnn('removefiltro')">Remover Filtro</button>
                             <button class="mg" onclick="btnn('Filtrar')">Filtrar</button>
                         </div>
                     </div>
@@ -114,8 +115,8 @@
                         </div>
                         <div class="area_text">
                             <h1 class="p">Nome: Aj venturi</h1>
-                            <h1>Tipo: Farmacia</h1>
-                             <h1>Cidade: Pouso Redondo</h1>
+                            <h1 class="tiponame" data-estabelecimento="farmacia">Tipo: Farmacia</h1>
+                             <h1 class="cidadename" data-cidade="pousoredondo">Cidade: Pouso Redondo</h1>
                             <h1>Codigo: 7632</h1>
                         </div>
                     </div>
@@ -125,8 +126,8 @@
                         </div>
                         <div class="area_text">
                             <h1 class="p">Nome: Esquina</h1>
-                            <h1>Tipo: Lanchonete</h1>
-                             <h1>Cidade: Pouso Redondo</h1>
+                            <h1 class="tiponame" data-estabelecimento="lanchonete">Tipo: Lanchonete</h1>
+                             <h1 class="cidadename" data-cidade="pousoredondo">Cidade: Pouso Redondo</h1>
                             <h1>Codigo: 1485</h1>
                         </div>
                     </div>
@@ -136,8 +137,8 @@
                         </div>
                         <div class="area_text">
                             <h1 class="p">Nome: Doce Delicia</h1>
-                            <h1>Tipo: Lanchonete</h1>
-                             <h1>Cidade: Taio</h1>
+                            <h1 class="tiponame" data-estabelecimento="lanchonete">Tipo: Lanchonete</h1>
+                             <h1 class="cidadename" data-cidade="taio">Cidade: Taio</h1>
                             <h1>Codigo: 9731</h1>
                         </div>
                     </div>
