@@ -1,3 +1,4 @@
+// function que abre e fecha o menu
 let menu = document.querySelector(".menu_mobile_bar")
 menu.addEventListener("click", () => {
     let content = document.querySelector("main")
@@ -11,7 +12,7 @@ menu.addEventListener("click", () => {
         content.classList.toggle('hidden')
     }
 })
-
+// function que para o filtro das cidades
 function btnn(button) {
     
     let filtrof = document.querySelector(".modalf");
@@ -24,6 +25,7 @@ function btnn(button) {
     }
 }
 
+// function refente a abrir e fechar o modal, onde aparece os dados individuais de cada empresa
 let btns = document.querySelectorAll(".area_conteudo");
 
 // Adicionando evento de clique em cada um dos elementos
