@@ -1083,6 +1083,9 @@
      .menu {
          width: 100%;
      }
+     .rua{
+        margin-left: 5px;
+     }
 
      .menu_area {
          display: grid;
