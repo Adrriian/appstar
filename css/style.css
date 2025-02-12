@@ -1211,7 +1211,7 @@
          align-items: center;
          justify-content: center;
          flex-direction: column;
-         width: 85vw;
+         width: 90vw;
          height: 85vh;
          background-color: var(--bg-color3);
          border: 2px solid var(--bg-color2);
