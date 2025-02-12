@@ -332,7 +332,9 @@
      .phone {
          margin-bottom: 5px;
      }
-
+     .rua{
+        margin-left: 5px;
+     }
      .area_content_comunication {
          display: grid;
          grid-template-columns: 1fr;
@@ -427,7 +429,9 @@
          align-items: center;
          justify-content: center;
      }
-
+     .rua{
+        margin-left: 5px;
+     }
      .menu {
          width: 100%;
      }
@@ -744,6 +748,9 @@
 
      .menu {
          width: 100%;
+     }
+     .rua{
+        margin-left: 5px;
      }
 
      .menu_area {
