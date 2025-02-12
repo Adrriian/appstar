@@ -17,7 +17,7 @@ function btnn(button) {
     // Obtém os rádios selecionados
     let filtroc = document.querySelector('input[name="cidade"]:checked');
     let filtroe = document.querySelector('input[name="estabelecimento"]:checked');
-    
+
     // Verifica se os rádios foram selecionados para evitar erro
     let valorCidade = filtroc ? filtroc.value : "";
     let valorEstabelecimento = filtroe ? filtroe.value : "";
@@ -27,7 +27,7 @@ function btnn(button) {
 
     // Função para filtrar as divs com base na cidade ou estabelecimento selecionado
     function filtrar() {
-        areaf.forEach(function(divf) {
+        areaf.forEach(function (divf) {
             // Obtém os valores de 'data-cidade' e 'data-estabelecimento' para cada div
             let filtroCidadeDiv = divf.querySelector('.cidadename') ? divf.querySelector('.cidadename').getAttribute('data-cidade') : "";
             let filtroEstabelecimentoDiv = divf.querySelector('.tiponame') ? divf.querySelector('.tiponame').getAttribute('data-estabelecimento') : "";
@@ -53,22 +53,29 @@ function btnn(button) {
         case 'CIDADE':
             filtrof.style.display = 'flex'; // Exibe o filtro de cidade
             break;
-            case 'Remover Filtro':
-                // Deseleciona os rádios de cidade e estabelecimento
-                let cidadesRadios = document.querySelectorAll('input[name="cidade"]');
-                let estabelecimentosRadios = document.querySelectorAll('input[name="estabelecimento"]');
-    
-                // Deseleciona todos os rádios
-                cidadesRadios.forEach(radio => radio.checked = false);
-                estabelecimentosRadios.forEach(radio => radio.checked = false);
-                areaf.forEach(function(divf) {
-                    divf.style.display = 'grid'; // Exibe todas as divs com grid
-                    divf.classList.remove('none'); // Remove a classe 'none', se houver
-                });
-    
-                // Fecha o filtro
-                filtrof.style.display = 'none'; // Fecha o filtro // Fecha o filtro após a aplicação
-        break;
+        case 'removefiltro':
+            let filtroc = document.querySelector('input[name="cidade"]:checked');
+            let filtroe = document.querySelector('input[name="estabelecimento"]:checked');
+            let itens = document.querySelectorAll('.item'); // Seleciona todos os itens
+
+            if (filtroc) {
+                filtroc.checked = false;
+            }
+            if (filtroe) {
+                filtroe.checked = false;
+            }
+
+            // Garante que todos os itens tenham display: grid
+            itens.forEach(function (item) {
+                item.style.display = 'grid';
+            });
+
+            break;
+
+        case 'Remover Filtro':
+
+            break;
+
         case 'Filtrar':
             filtrar(); // Chama a função de filtragem quando o botão "Filtrar" for pressionado
             filtrof.style.display = 'none'; // Fecha o filtro após a aplicação
@@ -114,7 +121,7 @@ function btns2() {
             midia.href = "https://www.instagram.com/farmacia_ajventuri?igsh=MXBnaG4xYnFuMWhmZg==";
             midias.href = "https://wa.me/5547991967337";
             phones.textContent = "(47) 991967337";
-            btnw.href="https://wa.me/5547991967337";
+            btnw.href = "https://wa.me/5547991967337";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
             break;
@@ -130,12 +137,12 @@ function btns2() {
             midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
             midias.href = "https://wa.me/5547997508905";
             phones.textContent = "(47) 997508905";
-            btnw.href="https://wa.me/5547997508905";
+            btnw.href = "https://wa.me/5547997508905";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
             break;  // Corrigido para parar após o segundo caso
-            
-             case 'Nome: Doce Delicia':
+
+        case 'Nome: Doce Delicia':
             lojas.style.display = 'flex';
             img.src = "img/logos/docedelicia.jpg"
             img.alt = "Logo do Food Truck Doce Delicia"
@@ -144,9 +151,9 @@ function btns2() {
             rua.textContent = "Rodovia Bruno Heidrich N:S/N Proximo A Rodhen Vidros";
             bairro.textContent = "Br 470";
             midia.href = "https://www.instagram.com/doce_deliciaaaa_?igsh=NWVoYXRjbWF4MTBp";
-             midias.href = "https://wa.me/5547992897078";
+            midias.href = "https://wa.me/5547992897078";
             phones.textContent = "(47) 992897078";
-            btnw.href="https://wa.me/5547992897078";
+            btnw.href = "https://wa.me/5547992897078";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
             break;  // Corrigido para parar após o segundo caso
