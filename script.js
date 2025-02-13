@@ -99,6 +99,7 @@ function btns2() {
     let imgf = document.querySelector(".area_content_img")
     let name = document.querySelector(".name");
     let rua = document.querySelector(".rua");
+    let num = document.querySelector(".num")
     let bairro = document.querySelector(".bairro");
     let phones = document.querySelector(".phones");
     let produtos = document.querySelector(".produtos")
@@ -115,7 +116,8 @@ function btns2() {
             img.alt = "Logo da farmacia aj venturi"
             imgf.style.background = "white"
             name.textContent = "Aj Venturi";
-            rua.textContent = "Henrique Bichels N: 232";
+            rua.textContent = "Henrique Bichels";
+            num.textContent = "232"
             bairro.textContent = "Centro";
             // Criando o elemento de imagem e adicionando corretamente
             midia.href = "https://www.instagram.com/farmacia_ajventuri?igsh=MXBnaG4xYnFuMWhmZg==";
@@ -133,6 +135,7 @@ function btns2() {
             imgf.style.background = "black"
             name.textContent = "Esquina";
             rua.textContent = "Jorge lacerda N: 21";
+            num.textContent = "21"
             bairro.textContent = "Centro";
             midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
             midias.href = "https://wa.me/5547997508905";
@@ -148,14 +151,15 @@ function btns2() {
             img.alt = "Logo do Food Truck Doce Delicia"
             imgf.style.background = "white"
             name.textContent = "Doce Delicia";
-            rua.textContent = "Rodovia Bruno Heidrich N:S/N Proximo A Rodhen Vidros";
+            rua.textContent = "Rodovia Bruno Heidrich";
+            num.textContent = "S/N"
             bairro.textContent = "Br 470";
             midia.href = "https://www.instagram.com/doce_deliciaaaa_?igsh=NWVoYXRjbWF4MTBp";
             midias.href = "https://wa.me/5547992897078";
             phones.textContent = "(47) 992897078";
             btnw.href = "https://wa.me/5547992897078";
             // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
+            produtos.innerHTML = "<li>Delivery e retirada no local</li> <li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
             break;  
             case 'Nome: Point do Açai':
                 lojas.style.display = 'flex';
@@ -163,14 +167,15 @@ function btns2() {
                 img.alt = "Logo do point do açai"
                 imgf.style.background = "#75196E"
                 name.textContent = "Point do Açai";
-                rua.textContent = "Rua 7 de Setembro N: 569";
+                rua.textContent = "Rua 7 de Setembro";
+                num.textContent = "569"
                 bairro.textContent = "Independência";
                 midia.href = "https://www.instagram.com/pointdoacaisorvetes?igsh=MXh2YmpvYnNzcDdxdA==";
                 midias.href = "https://wa.me/5547992281688";
                 phones.textContent = "(47) 992281688";
                 btnw.href = "https://wa.me/5547992281688";
                 // Adicionando produtos de forma correta
-                produtos.innerHTML = "<li>10% Para:</li><li>Marmita 400gm</li><li>Barca 500gm</li>";
+                produtos.innerHTML = "<li>10% Para:</li> <li>Marmita 400gm</li> <li>Barca 500gm</li>";
                 break;  // Corrig// Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos

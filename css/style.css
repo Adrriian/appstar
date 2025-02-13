@@ -313,7 +313,7 @@
      }
 
      .area_content_img img {
-         margin-left: 20px;
+    
          width: 45%;
          object-fit: cover;
      }
@@ -593,7 +593,6 @@
 
      .area_content_img img {
          height: 120px;
-         margin-left: 20px;
          width: 45%;
          object-fit: contain;
      }
@@ -924,7 +923,7 @@
 
      .area_content_img img {
          height: 120px;
-         margin-left: 20px;
+ 
          width: 45%;
          object-fit: contain;
      }
@@ -1253,7 +1252,7 @@
 
      .area_content_img img {
          height: 120px;
-         margin-left: 20px;
+  
          width: 45%;
          object-fit: contain;
      }
@@ -1590,7 +1589,7 @@
      }
 
      .area_content_img img {
-         margin-left: 20px;
+         
          width: 45%;
          object-fit: contain;
      }
