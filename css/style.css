@@ -230,7 +230,7 @@
         border: 1px solid var(--bg-color2);
         background-color: rgb(219, 218, 218);
         margin-top: 20px;
-        height: 70vh;
+        
         overflow: scroll;
 
     }
@@ -973,7 +973,7 @@
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
          margin-top: 20px;
-         height: 70vh;
+       
          overflow: scroll;
      }
 
@@ -1290,7 +1290,7 @@
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
          margin-top: 20px;
-         height: 70vh;
+        
          overflow: scroll;
      }
 
@@ -1623,7 +1623,7 @@
          border: 1px solid var(--bg-color2);
          background-color: rgb(219, 218, 218);
          margin-top: 20px;
-         height: 70vh;
+         
          overflow: scroll;
      }
 
