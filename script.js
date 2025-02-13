@@ -144,7 +144,7 @@ function btns2() {
 
         case 'Nome: Doce Delicia':
             lojas.style.display = 'flex';
-            img.src = "img/logos/docedelicia.jpg"
+            img.src = "img/logos/docedelicia.png"
             img.alt = "Logo do Food Truck Doce Delicia"
             imgf.style.background = "white"
             name.textContent = "Doce Delicia";
@@ -156,7 +156,22 @@ function btns2() {
             btnw.href = "https://wa.me/5547992897078";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
-            break;  // Corrigido para parar após o segundo caso
+            break;  
+            case 'Nome: Point do Açai':
+                lojas.style.display = 'flex';
+                img.src = "img/logos/POINT.png"
+                img.alt = "Logo do point do açai"
+                imgf.style.background = "#75196E"
+                name.textContent = "Point do Açai";
+                rua.textContent = "Rua 7 de Setembro N: 569";
+                bairro.textContent = "Independência";
+                midia.href = "https://www.instagram.com/pointdoacaisorvetes?igsh=MXh2YmpvYnNzcDdxdA==";
+                midias.href = "https://wa.me/5547992281688";
+                phones.textContent = "(47) 992281688";
+                btnw.href = "https://wa.me/5547992281688";
+                // Adicionando produtos de forma correta
+                produtos.innerHTML = "<li>10% Para:</li><li>Marmita 400gm</li><li>Barca 500gm</li>";
+                break;  // Corrig// Corrigido para parar após o segundo caso
         default:
             break;  // Adicionando default para casos não previstos
     }

@@ -315,7 +315,7 @@
      .area_content_img img {
          margin-left: 20px;
          width: 45%;
-         object-fit: contain;
+         object-fit: cover;
      }
 
      .area_content_text {
