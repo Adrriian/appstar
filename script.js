@@ -125,7 +125,7 @@ function btns2() {
             phones.textContent = "(47) 991967337";
             btnw.href = "https://wa.me/5547991967337";
             // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>Remédios Genéricos</li><li>Perfumaria</li><li>Vitaminas</li>";
+            produtos.innerHTML = "<li>10% Remédios Genéricos</li><li>5% Perfumaria</li><li>5% Vitaminas</li>";
             break;
 
         case 'Nome: Esquina':
@@ -134,7 +134,7 @@ function btns2() {
             img.alt = "Logo da lanchonete esquina"
             imgf.style.background = "black"
             name.textContent = "Esquina";
-            rua.textContent = "Jorge lacerda N: 21";
+            rua.textContent = "Jorge lacerda";
             num.textContent = "21"
             bairro.textContent = "Centro";
             midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
@@ -142,7 +142,7 @@ function btns2() {
             phones.textContent = "(47) 997508905";
             btnw.href = "https://wa.me/5547997508905";
             // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>Pizza</li><li>Hamburguer</li>";
+            produtos.innerHTML = "<li>10% Para:</li> <li>Pizza</li><li>Hamburguer</li>";
             break;  // Corrigido para parar após o segundo caso
 
         case 'Nome: Doce Delicia':
@@ -159,24 +159,168 @@ function btns2() {
             phones.textContent = "(47) 992897078";
             btnw.href = "https://wa.me/5547992897078";
             // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>Delivery e retirada no local</li> <li>A partir de R$30 2% de desconto</li><li>A partir de R$50 10% de desconto</li>";
-            break;  
-            case 'Nome: Point do Açai':
-                lojas.style.display = 'flex';
-                img.src = "img/logos/POINT.png"
-                img.alt = "Logo do point do açai"
-                imgf.style.background = "#75196E"
-                name.textContent = "Point do Açai";
-                rua.textContent = "Rua 7 de Setembro";
-                num.textContent = "569"
-                bairro.textContent = "Independência";
-                midia.href = "https://www.instagram.com/pointdoacaisorvetes?igsh=MXh2YmpvYnNzcDdxdA==";
-                midias.href = "https://wa.me/5547992281688";
-                phones.textContent = "(47) 992281688";
-                btnw.href = "https://wa.me/5547992281688";
-                // Adicionando produtos de forma correta
-                produtos.innerHTML = "<li>10% Para:</li> <li>Marmita 400gm</li> <li>Barca 500gm</li>";
-                break;  // Corrig// Corrigido para parar após o segundo caso
+            produtos.innerHTML = "<li>Delivery e retirada no local</li> <li>A partir de R$30 2% <br> de desconto</li><li>A partir de R$50 10% <br> de desconto</li>";
+        break;  
+        case 'Nome: Point do Açai':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/POINT.png"
+            img.alt = "Logo do point do açai"
+            imgf.style.background = "#75196E"
+            name.textContent = "Point do Açai";
+            rua.textContent = "Rua 7 de Setembro";
+            num.textContent = "569"
+            bairro.textContent = "Independência";
+            midia.href = "https://www.instagram.com/pointdoacaisorvetes?igsh=MXh2YmpvYnNzcDdxdA==";
+            midias.href = "https://wa.me/5547992281688";
+            phones.textContent = "(47) 992281688";
+            btnw.href = "https://wa.me/5547992281688";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>10% Para:</li> <li>Marmita 400gm</li> <li>Barca 500gm</li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso
+        case 'Nome: Diego Chapeação Pintura':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/diegochapeacao.jpeg"
+            img.alt = "Logo Diego Chapeação Pintura"
+            imgf.style.background = "black"
+            name.innerHTML = "Diego Chapeação<br>Pintura";
+            rua.textContent = "Rua 23 De Julho";
+            num.textContent = "1265"
+            bairro.textContent = "Centro";
+            midia.href = "https://www.instagram.com/diegochapeacaoepintura?igsh=bnF6cXVwZnphdXVr";
+            midias.href = "https://wa.me/55479991077674";
+            phones.textContent = "(47) 991077674";
+            btnw.href = "https://wa.me/5547991077674";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>10% De Desconto<br>Em Serviços Particulares</li><li>(Somente Avista)<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso
+        case 'Nome: Dijan Chapeação Pintura':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/dijan.jpeg"
+            img.alt = "Logo Dijan Chapeaçao e Pintura"
+            imgf.style.background = "black"
+            name.innerHTML = "Dijan Chapeação<br>Pintura";
+            rua.textContent = "BR470 km175";
+            num.textContent = "1265"
+            bairro.textContent = "Arno Siewerdt";
+            midia.href = "https://www.instagram.com/chapeacaodijan?igsh=MWMyNnhlMHQ2M3c4cg==";
+            midias.href = "https://wa.me/5547991603096";
+            phones.textContent = "(47) 991603096";
+            btnw.href = "https://wa.me/5547991603096";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>5% De Desconto<br>Em Serviços Particulares<br>e na franquia</li><li>(Somente Avista)<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Auto Posto Pr':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/autopostopr.jpeg"
+            img.alt = "Logo Auto Posto PR"
+            imgf.style.background = "white"
+            name.innerHTML = "Auto Posto PR";
+            rua.textContent = "BR470 km175";
+            num.textContent = "633"
+            bairro.textContent = "Centro";
+            midia.href = "https://www.instagram.com/autopostopr?igsh=MWFza29teXh5aXhiaQ==";
+            midias.href = "https://wa.me/5547991603096";
+            phones.textContent = "(47) 991603096";
+            btnw.href = "https://wa.me/5547991603096";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>2% Gasolina<li><li>10% Na troca de Óleo<li> <li>Necessario cadastro no posto<br>pagamento somente<br>na conveniencia<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Minibom':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/minibom.jpeg"
+            img.alt = "Logo Auto Posto PR"
+            imgf.style.background = "#fff5f6"
+            name.innerHTML = "Minibom";
+            rua.textContent = "Rua Nereu Ramos";
+            num.textContent = "48 sala 01"
+            bairro.textContent = "Centro";
+            midia.href = "https://www.instagram.com/minibomsorveteecafe?igsh=MWQ4YXlrcHpneGdxMg==";
+            midias.href = "https://wa.me/5547997750531";
+            phones.textContent = "(47) 997750531";
+            btnw.href = "https://wa.me/5547997750531";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>8% de Desconto nos produtos<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Pijurauto':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/pijurauto.jpeg"
+            img.alt = "Logo Pijurauto"
+            imgf.style.background = "#f26022"
+            name.innerHTML = "Pijurauto";
+            rua.textContent = "Rua Presidente Nereu";
+            num.textContent = "131"
+            bairro.textContent = "Centro";
+            midia.href = "https://www.instagram.com/postopijurautocascata?igsh=bWNtc2dwcGY5Y2R0";
+            midias.href = "https://wa.me/5547991190080";
+            phones.textContent = "(47) 991190080";
+            btnw.href = "https://wa.me/5547991190080";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>20 centavos de desconto no litro de Gasolina comum<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Vision Estética Automotiva':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/vision.jpeg"
+            img.alt = "Logo Vision"
+            imgf.style.background = "#2e1c1a"
+            name.innerHTML = "Vision Estética Automotiva";
+            rua.textContent = "SC 350 km375 (junto ao posto gaucho)";
+            num.textContent = "S/n"
+            bairro.textContent = "Santa Teresa";
+            midia.href = "https://www.instagram.com/vision.estetica_automotiva?igsh=MW5jcXIzNnZ0cmJ3ag==";
+            midias.href = "https://wa.me/5547997351553";
+            phones.textContent = "(47) 997351553";
+            btnw.href = "https://wa.me/5547997351553";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>10% na lavação automotiva<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Tintas Wilson e Filho':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/tintas.jpeg"
+            img.alt = "Logo Tintas Wilson e Filho"
+            imgf.style.background = "white"
+            name.innerHTML = "Tintas Wilson e Filho";
+            rua.textContent = "Rua prefeito querino ferrari";
+            num.textContent = "176"
+            bairro.textContent = "Centro";
+            midia.href = "https://www.instagram.com/tintaswilsonefilho?igsh=MTFhamE3M29oODJrdQ==";
+            midias.href = "https://wa.me/5547935451509";
+            phones.textContent = "(47) 935451509";
+            btnw.href = "https://wa.me/5547935451509";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>5% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Ovande Oficina Mecânica':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/ovande.jpeg"
+            img.alt = "Logo Ovande Oficina Mecânica"
+            imgf.style.background = "#054897"
+            name.innerHTML = "Ovande Oficina Mecânica";
+            rua.textContent = "Rua dos Pioneiros";
+            num.textContent = "2112"
+            bairro.textContent = "Centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5547988123141";
+            phones.textContent = "(47) 988123141";
+            btnw.href = "https://wa.me/5547988123141";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>10% de Descontos Nas Peças<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Auto Elétrica Pesenti Ltda':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/eletrica.jpeg"
+            img.alt = "Logo Ovande Oficina Mecânica"
+            imgf.style.background = "#e6e7e8"
+            name.innerHTML = "Auto Elétrica Pesenti Ltda";
+            rua.textContent = "Av. 25 de julho";
+            num.textContent = "298"
+            bairro.textContent = "Centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5547999939094";
+            phones.textContent = "(47) 999939094";
+            btnw.href = "https://wa.me/5547999939094";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>5% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
     }
