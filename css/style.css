@@ -207,8 +207,8 @@ label {
    }
 
    .filtro_area_aberto {
-       display: grid;
-       grid-template-columns: 1fr;
+       display: flex;
+       flex-direction: column;
        padding: 10px;
        z-index: 1;
        width: 90vw;
@@ -223,7 +223,6 @@ label {
    .filtro_estabelecimento_text {
        display: grid;
        grid-template-columns: 1fr;
-       grid-row: 2fr;
        padding: 10px;
    }
 
@@ -433,11 +432,30 @@ label {
       margin: 5px 0 5px 0;
   }
 
-  @media (max-width:556px) {
-    .area_content_img img {
- 
-        width: 30%;
+@media (max-width:556px) {
+.area_content_img img {
+
+    width: 30%;
+}
+
+}
+
+@media (max-width:511px) {
+    .filtro_cidade_text,
+    .filtro_estabelecimento_text {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        height: 40%;
     }
+
+}
+@media (max-width:356px) {
+    .filtro_estabelecimento_area,
+    .filtro_cidade_area{
+     grid-template-columns: 1fr;
+    }
+
 }
 @media(min-width:320px) and (max-width:500px) {
     .button_modal{
