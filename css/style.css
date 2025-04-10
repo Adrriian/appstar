@@ -193,15 +193,15 @@ label {
    }
    .modalf,
    .modalc {
-       display: none;
-       align-items: center;
-       justify-content: center;
-       position: fixed;
-       top: 0;
-       bottom: 0;
-       right: 0;
-       left: 0;
-       background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
    }
 
    .filtro_area_aberto {
@@ -277,22 +277,21 @@ label {
    }
 
    .area_content_open {
-       display: flex;
+       display: grid;
+       grid-template-columns: 1fr;
        align-items: center;
        justify-content: center;
-       flex-direction: column;
-       width: 18vw;
-       height: 80vh;
+       width: 90%;
+       height: 90%;
        background-color: var(--bg-color3);
        border: 2px solid var(--bg-color2);
    }
 
    .area_content_return {
-       width: 100%;
-       height: 8%;
        display: grid;
        grid-template-columns: 100px 1fr;
        align-items: center;
+       height: 100%;
        justify-content: center;
        background-color: var(--bg-color1);
    }
@@ -310,17 +309,27 @@ label {
    .area_content_img {
        background-color: white;
        width: 100%;
-       text-align: center;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
        border-bottom: 2px solid var(--bg-color2);
    }
 
    .area_content_img img {
-  
-       width: 45%;
-       object-fit: cover;
+       border-radius: 100%;
+       width: 16%;
+       margin: 10px;
+       border: 1px solid var(--bg-color2);
+       object-fit: contain;
    }
 
    .area_content_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 10px;
        color: var(--bg-color1);
    }
 
@@ -382,7 +391,9 @@ label {
        grid-template-columns: 70px 1fr;
        gap: 5px;
    }
-
+   .button_modal{
+    width: 50%;
+}
    .sb {
        border-bottom: 0;
        margin-bottom: 0;
@@ -418,150 +429,10 @@ label {
   }
 
 
-@media(min-width:769px) and (max-width:1024px) {
+@media(min-width:320px) and (max-width:500px) {
     .button_modal{
         width: 68%;
     }
-    .area_content_open {
-        width: 24vw;
-        height: 84vh;
-      
-    }
-}
-
-@media(min-width:700px) and (max-width:768px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 32vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:626px) and (max-width:699px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 38vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:564px) and (max-width:625px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 42vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:508px) and (max-width:563px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 46vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:463px) and (max-width:507px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 46vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:426px) and (max-width:462px) {
-    .button_modal{
-        width: 68%;
-    }
-    .area_content_open {
-        width: 50vw;
-        height: 84vh;
-      
-    }
-}
-@media(min-width:376px) and (max-width:426px) {
-    .button_modal{
-        margin-bottom: 10px;
-        width: 69%;
-    }
-    .area_content_open {
-        width: 55vw;
-        height: 84vh;  
-    }
-    .filtro_estabelecimento_text{
-        overflow: hidden;
-    }
-    .filtro_area_aberto{
-        height: 85vh;
-    }
-    .filtro_estabelecimento_area,
-    .filtro_cidade_area{
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     overflow: scroll;
-    }
-}
-@media(min-width:321px) and (max-width:376px) {
-
-    .button_modal{
-        width: 70%;
-    }
-    .area_content_open {
-        width: 62vw;
-        height: 84vh;  
-    }
-    .area_text h1{
-        font-size: 0.9rem;
-    }
-    .filtro_estabelecimento_text{
-        overflow: hidden;
-    }
-    .filtro_area_aberto{
-        height: 100vh;
-    }
-    .filtro_estabelecimento_area,
-    .filtro_cidade_area{
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     overflow: scroll;
-    }
-}
-
-@media (max-width:320px) {
-    .button_modal{
-        width: 70%;
-    }
-    .area_content_open {
-        width: 74vw;
-        height: 84vh;  
-    }
-    .area_text h1{
-        font-size: 0.9rem;
-    }
-    .filtro_estabelecimento_text{
-        overflow: hidden;
-    }
-    .filtro_area_aberto{
-        height: 100vh;
-    }
-    .filtro_estabelecimento_area,
-    .filtro_cidade_area{
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     overflow-y: scroll;
-    }
-    input,
-    label{
-        font-size: 0.7rem;
-    }
+   
+    
 }
