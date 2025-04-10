@@ -327,7 +327,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/chaveiro.png"
             img.alt = "Logo Chaveiro JVS"
-            imgf.style.background = "#0d1021"
+            imgf.style.background = "white"
             name.innerHTML = "Chaves JVS";
             rua.textContent = "Rua dos Pioneiros";
             num.textContent = "647"
@@ -343,7 +343,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/autocar.png"
             img.alt = "Logo Auto Car"
-            imgf.style.background = "#0d1021"
+            imgf.style.background = "black"
             name.innerHTML = "Auto Car";
             rua.textContent = "Raul Tenete Costa";
             num.textContent = "400"
