@@ -236,7 +236,7 @@ label {
        background-color: rgb(219, 218, 218);
        margin-top: 20px;
        overflow-y: scroll;
-
+       height: 75vh;
    }
 
    .area_conteudo {
