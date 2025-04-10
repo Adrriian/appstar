@@ -311,7 +311,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/eletrica.png"
             img.alt = "Logo Ovande Oficina Mecânica"
-            imgf.style.background = "black"
+            imgf.style.background = "#0d1021"
             name.innerHTML = "Auto Elétrica Pesenti Ltda";
             rua.textContent = "Av. 25 de julho";
             num.textContent = "298"
