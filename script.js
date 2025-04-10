@@ -245,6 +245,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/pijurauto.jpeg"
             img.alt = "Logo Pijurauto"
+            img.style.border = "2px solid white"
             imgf.style.background = "#f26022"
             name.innerHTML = "Pijurauto";
             rua.textContent = "Rua Presidente Nereu";
@@ -291,8 +292,9 @@ function btns2() {
         break;  // Corrig// Corrigido para parar após o segundo caso"
         case 'Nome: Ovande Oficina Mecânica':
             lojas.style.display = 'flex';
-            img.src = "img/logos/ovande.jpeg"
+            img.src = "img/logos/ovande.png"
             img.alt = "Logo Ovande Oficina Mecânica"
+            img.style.border = "2px solid white"
             imgf.style.background = "#054897"
             name.innerHTML = "Ovande Oficina Mecânica";
             rua.textContent = "Rua dos Pioneiros";
@@ -307,9 +309,9 @@ function btns2() {
         break;  // Corrig// Corrigido para parar após o segundo caso"
         case 'Nome: Auto Elétrica Pesenti Ltda':
             lojas.style.display = 'flex';
-            img.src = "img/logos/eletrica.jpeg"
+            img.src = "img/logos/eletrica.png"
             img.alt = "Logo Ovande Oficina Mecânica"
-            imgf.style.background = "#e6e7e8"
+            imgf.style.background = "black"
             name.innerHTML = "Auto Elétrica Pesenti Ltda";
             rua.textContent = "Av. 25 de julho";
             num.textContent = "298"
@@ -328,5 +330,7 @@ function btns2() {
 }
 let fecharModal = document.querySelector(".fechar_modal");
 fecharModal.addEventListener("click", function () {
+    let img = document.querySelector(".img_troca")
+    img.style.border = "2px solid #ff5900"
     document.querySelector(".modalc").style.display = 'none';
 });
