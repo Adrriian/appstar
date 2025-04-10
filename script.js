@@ -323,6 +323,38 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>5% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Chaves JVS':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/chaveiro.png"
+            img.alt = "Logo Chaveiro JVS"
+            imgf.style.background = "#0d1021"
+            name.innerHTML = "Chaves JVS";
+            rua.textContent = "Rua dos Pioneiros";
+            num.textContent = "647"
+            bairro.textContent = "Centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5547988474810";
+            phones.textContent = "(47) 988474810";
+            btnw.href = "https://wa.me/5547988474810";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>15% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Auto Car':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/autocar.png"
+            img.alt = "Logo Auto Car"
+            imgf.style.background = "#0d1021"
+            name.innerHTML = "Auto Car";
+            rua.textContent = "Raul Tenete Costa";
+            num.textContent = "400"
+            bairro.textContent = "Centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5549991848879";
+            phones.textContent = "(49) 991848879";
+            btnw.href = "https://wa.me/5549991848879";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>8% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
     }
