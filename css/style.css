@@ -190,7 +190,8 @@ label {
    .filtro_estabelecimento_area,
    .filtro_cidade_area{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+    overflow-y: scroll;
    }
    .modalf,
    .modalc {
@@ -211,7 +212,7 @@ label {
        padding: 10px;
        z-index: 1;
        width: 90vw;
-       height: 80vh;
+       height: 90vh;
        background-color: var(--bg-color3);
        color: var(--bg-color2);
        border-radius: 10px;
