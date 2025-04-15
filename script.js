@@ -339,6 +339,22 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>8% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Daniel Eletro':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/danieleletro.jpeg"
+            img.alt = "Logo Daniel Eletro"
+            imgf.style.background = "black"
+            name.innerHTML = "Daniel Eletro";
+            rua.textContent = "Rua Leonel Thiesen ";
+            num.textContent = "2044"
+            bairro.textContent = "Vila Nova";
+            midia.style.display = "https://www.instagram.com/danieleletro.com.br?igsh=ZHlwZDA3bXp0eDNv";
+            midias.href = "https://wa.me/5547999904389";
+            phones.textContent = "(49) 999904389";
+            btnw.href = "https://wa.me/5547999904389";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>15% de Desconto Na primeira Compra<li> <li>10% de Desconto Nas demais Compra<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
     }
