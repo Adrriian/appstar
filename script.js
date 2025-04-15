@@ -209,22 +209,6 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>5% De Desconto<br>Em Serviços Particulares<br>e na franquia</li><li>(Somente Avista)<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Auto Posto Pr':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/autopostopr.jpeg"
-            img.alt = "Logo Auto Posto PR"
-            imgf.style.background = "white"
-            name.innerHTML = "Auto Posto PR";
-            rua.textContent = "BR470 km175";
-            num.textContent = "633"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/autopostopr?igsh=MWFza29teXh5aXhiaQ==";
-            midias.href = "https://wa.me/5547991603096";
-            phones.textContent = "(47) 991603096";
-            btnw.href = "https://wa.me/5547991603096";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>2% Gasolina<li><li>10% Na troca de Óleo<li> <li>Necessario cadastro no posto<br>pagamento somente<br>na conveniencia<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
         case 'Nome: Minibom':
             lojas.style.display = 'flex';
             img.src = "img/logos/minibom.jpeg"
