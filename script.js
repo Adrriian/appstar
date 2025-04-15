@@ -348,7 +348,7 @@ function btns2() {
             rua.textContent = "Rua Leonel Thiesen ";
             num.textContent = "2044"
             bairro.textContent = "Vila Nova";
-            midia.style.display = "https://www.instagram.com/danieleletro.com.br?igsh=ZHlwZDA3bXp0eDNv";
+            midia.href = "https://www.instagram.com/danieleletro.com.br?igsh=ZHlwZDA3bXp0eDNv";
             midias.href = "https://wa.me/5547999904389";
             phones.textContent = "(49) 999904389";
             btnw.href = "https://wa.me/5547999904389";
