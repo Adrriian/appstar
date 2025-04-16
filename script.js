@@ -343,7 +343,7 @@ function btns2() {
             lojas.style.display = 'flex';
             img.src = "img/logos/danieleletro.jpeg"
             img.alt = "Logo Daniel Eletro"
-            imgf.style.background = "black"
+            imgf.style.background = "#34004f"
             name.innerHTML = "Daniel Eletro";
             rua.textContent = "Rua Leonel Thiesen ";
             num.textContent = "2044"
