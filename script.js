@@ -373,7 +373,7 @@ function btns2() {
         break;  // Corrig// Corrigido para parar após o segundo caso"
         case 'Nome: Pit Stop':
             lojas.style.display = 'flex';
-            img.src = "img/logos/pitstop.jepg"
+            img.src = "img/logos/pitstop.jpeg"
             img.alt = "Logo Pit Stop"
             imgf.style.background = "black"
             name.innerHTML = "Pit Stop";
