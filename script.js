@@ -349,11 +349,43 @@ function btns2() {
             num.textContent = "2044"
             bairro.textContent = "Vila Nova";
             midia.href = "https://www.instagram.com/danieleletro.com.br?igsh=ZHlwZDA3bXp0eDNv";
-            midias.href = "https://wa.me/5547999904389";
+            midias.href = "https://wa.me/5549999904389";
             phones.textContent = "(49) 999904389";
-            btnw.href = "https://wa.me/5547999904389";
+            btnw.href = "https://wa.me/5549999904389";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>15% de Desconto Na primeira Compra<li> <li>10% de Desconto Nas demais Compra<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: J.Santos':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/jsantos.png"
+            img.alt = "Logo J.Santos"
+            imgf.style.background = "#464646"
+            name.innerHTML = "J.Santos";
+            rua.textContent = "Rua Governador Jorge Lacerda";
+            num.textContent = "270"
+            bairro.textContent = "centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5547991082330";
+            phones.textContent = "(47) 991082330";
+            btnw.href = "https://wa.me/5547991082330";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>15% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+        case 'Nome: Pit Stop':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/pitstop.jepg"
+            img.alt = "Logo Pit Stop"
+            imgf.style.background = "black"
+            name.innerHTML = "Pit Stop";
+            rua.textContent = "Rua Guilherme Kanitz";
+            num.textContent = "S/N"
+            bairro.textContent = "centro";
+            midia.style.display = "none";
+            midias.href = "https://wa.me/5547999289532";
+            phones.textContent = "(47) 999289532";
+            btnw.href = "https://wa.me/5547999289532";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>10% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
