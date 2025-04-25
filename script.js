@@ -387,6 +387,38 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>10% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
+            case 'Nome: Posto Coração do Estado':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/pitstop.jpeg"
+            img.alt = "Logo Posto Coração do Estado"
+            imgf.style.background = "#ffffff"
+            name.innerHTML = "Posto Coração do Estado";
+            rua.textContent = "Rodovia BR470 km 176";
+            num.textContent = "10243"
+            bairro.textContent = "centro";
+            midia.href = "  https://www.instagram.com/posto_coracao_do_estado/";
+            midias.href = "https://wa.me/554735451209";
+            phones.textContent = "(47) 35451209";
+            btnw.href = "https://wa.me/554735451209";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>3% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
+            case 'Nome:Loja da Kau':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/pitstop.jpeg"
+            img.alt = "Logo Loja da Kau"
+            imgf.style.background = "#f6f6f6"
+            name.innerHTML = "Loja da Kau";
+            rua.textContent = "Dorvalino Gonzaga";
+            num.textContent = "96"
+            bairro.textContent = "centro";
+            midia.href = "https://www.instagram.com/loja_do_kau/";
+            midias.href = "https://wa.me/554799605878";
+            phones.textContent = "(47) 99605878";
+            btnw.href = "https://wa.me/554799605878";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>3% de Desconto<li>";
+        break;  // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
     }
