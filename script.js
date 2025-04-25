@@ -412,7 +412,7 @@ function btns2() {
             rua.textContent = "Dorvalino Gonzaga";
             num.textContent = "96"
             bairro.textContent = "centro";
-            midia.href = "https://www.instagram.com/loja_do_kau/";
+            midia.style.display = "none";
             midias.href = "https://wa.me/554799605878";
             phones.textContent = "(47) 99605878";
             btnw.href = "https://wa.me/554799605878";
