@@ -389,7 +389,7 @@ function btns2() {
         break;  // Corrig// Corrigido para parar após o segundo caso"
             case 'Nome: Posto Coração do Estado':
             lojas.style.display = 'flex';
-            img.src = "img/logos/pitstop.jpeg"
+            img.src = "img/logos/posto.jpeg"
             img.alt = "Logo Posto Coração do Estado"
             imgf.style.background = "#ffffff"
             name.innerHTML = "Posto Coração do Estado";
@@ -405,7 +405,7 @@ function btns2() {
         break;  // Corrig// Corrigido para parar após o segundo caso"
             case 'Nome:Loja da Kau':
             lojas.style.display = 'flex';
-            img.src = "img/logos/pitstop.jpeg"
+            img.src = "img/logos/kau.jpeg"
             img.alt = "Logo Loja da Kau"
             imgf.style.background = "#f6f6f6"
             name.innerHTML = "Loja da Kau";
