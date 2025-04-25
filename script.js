@@ -403,7 +403,7 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>3% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
-            case 'Nome: Loja da Kau':
+            case 'Nome: Loja Da Kau':
             lojas.style.display = 'flex';
             img.src = "img/logos/kau.jpeg"
             img.alt = "Logo Loja da Kau"
