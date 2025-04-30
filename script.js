@@ -403,7 +403,7 @@ function btns2() {
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>3% de Desconto<li>";
         break;  // Corrig// Corrigido para parar após o segundo caso"
-            case 'Nome: Loja Da Kau':
+        case 'Nome: Loja Da Kau':
             lojas.style.display = 'flex';
             img.src = "img/logos/kau.jpeg"
             img.alt = "Logo Loja da Kau"
@@ -418,7 +418,23 @@ function btns2() {
             btnw.href = "https://wa.me/554799605878";
             // Adicionando produtos de forma correta
             produtos.innerHTML = "<li>3% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
+        break;
+        case 'Nome: Santos Auto Center':
+            lojas.style.display = 'flex';
+            img.src = "img/logos/file.jpeg"
+            img.alt = "Logo Santos Auto Center"
+            imgf.style.background = "#f6f6f6"
+            name.innerHTML = "Santos Auto Center";
+            rua.textContent = "Leoberto leal";
+            num.textContent = "103"
+            bairro.textContent = "centro";
+            midia.href = "https://www.instagram.com/autocentersantos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+            midias.href = "https://wa.me/5547999658278";
+            phones.textContent = "(47) 999658278";
+            btnw.href = "https://wa.me/5547999658278";
+            // Adicionando produtos de forma correta
+            produtos.innerHTML = "<li>5% de Desconto<li>";
+        break; // Corrig// Corrigido para parar após o segundo caso"
         default:
             break;  // Adicionando default para casos não previstos
     }
