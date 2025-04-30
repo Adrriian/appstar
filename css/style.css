@@ -250,7 +250,7 @@ label {
 
    .area_img {
        border-right: 1px solid var(--bg-color2);
-       object-fit: contain;
+       object-fit: cover;
    }
 
    .area_img img {
