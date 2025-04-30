@@ -421,7 +421,7 @@ function btns2() {
         break;
         case 'Nome: Santos Auto Center':
             lojas.style.display = 'flex';
-            img.src = "img/logos/file.jpeg"
+            img.src = "img/logos/autocenter.png"
             img.alt = "Logo Santos Auto Center"
             imgf.style.background = "#f6f6f6"
             name.innerHTML = "Santos Auto Center";
