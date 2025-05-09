@@ -192,6 +192,17 @@ label {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     overflow-y: scroll;
+
+   }
+   .area_btn1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+   }
+   .area_btn1{
+    margin: 0;
    }
    .modalf,
    .modalc {
@@ -223,7 +234,7 @@ label {
    .filtro_estabelecimento_text {
        display: grid;
        grid-template-columns: 1fr;
-       padding: 10px;
+   
    }
 
    .filtro_estabelecimento,
