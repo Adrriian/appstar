@@ -1,4 +1,4 @@
-// function que abre e fecha o menu
+// Script atualizado com base no HTML e JS fornecidos
 let menu = document.querySelector(".menu_mobile_bar")
 menu.addEventListener("click", () => {
     let content = document.querySelector("main")
@@ -12,437 +12,193 @@ menu.addEventListener("click", () => {
         content.classList.toggle('hidden')
     }
 })
-// function que para o filtro das cidades
-function btnn(button) {
-    // Obtém os rádios selecionados
-    let filtroc = document.querySelector('input[name="cidade"]:checked');
-    let filtroe = document.querySelector('input[name="estabelecimento"]:checked');
 
-    // Verifica se os rádios foram selecionados para evitar erro
-    let valorCidade = filtroc ? filtroc.value : "";
-    let valorEstabelecimento = filtroe ? filtroe.value : "";
+const API_URL = 'https://sheetdb.io/api/v1/zurdkl1c4o21d';
+const areaContainer = document.querySelector(".area");
+const modal = document.querySelector(".modalc");
+let estabelecimentos = [];
 
-    // Obtém todas as divs dentro da div mãe .area_conteudo
-    let areaf = document.querySelectorAll('.area_conteudo');
+async function fetchParceiros() {
+    try {
+        const response = await fetch(API_URL);
+        estabelecimentos = await response.json();
+        renderParceiros(estabelecimentos);
 
-    // Função para filtrar as divs com base na cidade ou estabelecimento selecionado
-    function filtrar() {
-        areaf.forEach(function (divf) {
-            // Obtém os valores de 'data-cidade' e 'data-estabelecimento' para cada div
-            let filtroCidadeDiv = divf.querySelector('.cidadename') ? divf.querySelector('.cidadename').getAttribute('data-cidade') : "";
-            let filtroEstabelecimentoDiv = divf.querySelector('.tiponame') ? divf.querySelector('.tiponame').getAttribute('data-estabelecimento') : "";
+        // Adiciona cidades automaticamente ao filtro após renderizar os parceiros
+        const containerCidades = document.querySelector('.filtro_cidade_area');
+        const cidadesExistentes = Array.from(containerCidades.querySelectorAll("input[name='cidade']"))
+            .map(input => input.value.trim().toLowerCase());
 
-            // Verifica se a cidade ou estabelecimento da div corresponde ao valor do rádio selecionado
-            let cidadeMatch = valorCidade !== "" ? filtroCidadeDiv === valorCidade : true;
-            let estabelecimentoMatch = valorEstabelecimento !== "" ? filtroEstabelecimentoDiv === valorEstabelecimento : true;
+       const cidadesUnicas = [...new Set(
+    estabelecimentos
+        .map(item => item.cidade && item.cidade.trim())
+        .filter(cidade => cidade) // remove null, undefined ou string vazia
+)];
 
-            // Exibe ou esconde a div com base na correspondência dos filtros
-            if (cidadeMatch && estabelecimentoMatch) {
-                divf.style.display = 'grid'; // Exibe a div com grid
-                divf.classList.remove('none'); // Remove a classe 'none', se existir
-            } else {
-                divf.style.display = 'none'; // Não exibe a div
-                divf.classList.add('none'); // Adiciona a classe 'none' à div
+
+        cidadesUnicas.forEach(cidade => {
+            const cidadeNormalizada = cidade.toLowerCase();
+            if (!cidadesExistentes.includes(cidadeNormalizada)) {
+                const cidadeId = cidade
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                    .replace(/\s+/g, '').toLowerCase();
+
+                const div = document.createElement('div');
+                div.className = 'filtro_cidade';
+
+                const input = document.createElement('input');
+                input.type = 'radio';
+                input.name = 'cidade';
+                input.id = cidadeId;
+                input.value = cidade;
+
+                const label = document.createElement('label');
+                label.htmlFor = cidadeId;
+                label.textContent = cidade;
+
+                div.appendChild(input);
+                div.appendChild(label);
+                containerCidades.appendChild(div);
             }
         });
-    }
 
-    // Verifica qual botão foi pressionado
-    let filtrof = document.querySelector(".modalf");
-    switch (button) {
-        case 'CIDADE':
-            filtrof.style.display = 'flex'; // Exibe o filtro de cidade
-            break;
-        case 'removefiltro':
-            let filtroc = document.querySelector('input[name="cidade"]:checked');
-            let filtroe = document.querySelector('input[name="estabelecimento"]:checked');
-            let itens = document.querySelectorAll('.item'); // Seleciona todos os itens
-
-            if (filtroc) {
-                filtroc.checked = false;
-            }
-            if (filtroe) {
-                filtroe.checked = false;
-            }
-
-            // Garante que todos os itens tenham display: grid
-            itens.forEach(function (item) {
-                item.style.display = 'grid';
-            });
-
-            break;
-
-        case 'Remover Filtro':
-
-            break;
-
-        case 'Filtrar':
-            filtrar(); // Chama a função de filtragem quando o botão "Filtrar" for pressionado
-            filtrof.style.display = 'none'; // Fecha o filtro após a aplicação
-            break;
+    } catch (error) {
+        console.error("Erro ao buscar dados da planilha:", error);
     }
 }
 
 
+function renderParceiros(data) {
+    if (!areaContainer) return;
+    areaContainer.innerHTML = "";
+    data.forEach(parceiro => {
+        // Verifica se todos os campos obrigatórios (exceto instagram) estão preenchidos
+        const camposObrigatorios = [
+            parceiro.nome,
+            parceiro.tipo,
+            parceiro.cidade,
+            parceiro.codigo,
+            parceiro.imagem,
+            parceiro.alt
+        ];
 
+        const dadosCompletos = camposObrigatorios.every(valor => valor && valor.trim() !== "");
+        if (!dadosCompletos) return; // Ignora se algum campo obrigatório estiver vazio
 
-// function refente a abrir e fechar o modal, onde aparece os dados individuais de cada empresa
-let btns = document.querySelectorAll(".area_conteudo");
+        const card = document.createElement("div");
+        card.className = "area_conteudo sm";
+        card.setAttribute("data-info", encodeURIComponent(JSON.stringify(parceiro)));
+        card.setAttribute("data-cidade", parceiro.cidade);
+        card.setAttribute("data-tipo", parceiro.tipo);
 
-// Adicionando evento de clique em cada um dos elementos
-btns.forEach(function btn(btns) {
-    btns.addEventListener("click", btns2)
-})
+        card.innerHTML = `
+            <div class="area_img">
+                <img src="${formatImage(parceiro.imagem)}" alt="${parceiro.alt}">
+            </div>
+            <div class="area_text">
+                <h1 class="p">Nome: ${parceiro.nome}</h1>
+                <h1 class="tiponame">Tipo: ${parceiro.tipo}</h1>
+                <h1 class="cidadename">Cidade: ${parceiro.cidade}</h1>
+                <h1 class="codigo">Codigo: ${parceiro.codigo}</h1>
+            </div>
+        `;
 
-function btns2() {
-    let img = document.querySelector(".img_troca")
-    let imgf = document.querySelector(".area_content_img")
-    let name = document.querySelector(".name");
-    let rua = document.querySelector(".rua");
-    let num = document.querySelector(".num")
-    let bairro = document.querySelector(".bairro");
-    let phones = document.querySelector(".phones");
-    let produtos = document.querySelector(".produtos")
-    let midia = document.querySelector(".links");
-    let midias = document.querySelector(".links2");
-    let btnw = document.querySelector(".btnw")
-    let lojas = document.querySelector(".modalc");
-    let esc = this.querySelector(".p").textContent;  // Captura o texto da área clicada
-
-    switch (esc) {
-        case 'Nome: Aj venturi':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/aj.png"
-            img.alt = "Logo da farmacia aj venturi"
-            imgf.style.background = "white"
-            name.textContent = "Aj Venturi";
-            rua.textContent = "Henrique Bichels";
-            num.textContent = "232"
-            bairro.textContent = "Centro";
-            // Criando o elemento de imagem e adicionando corretamente
-            midia.href = "https://www.instagram.com/farmacia_ajventuri?igsh=MXBnaG4xYnFuMWhmZg==";
-            midias.href = "https://wa.me/5547991967337";
-            phones.textContent = "(47) 991967337";
-            btnw.href = "https://wa.me/5547991967337";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% Remédios Genéricos</li><li>5% Perfumaria</li><li>5% Vitaminas</li>";
-            break;
-
-        case 'Nome: Esquina':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/esquina.jpg"
-            img.alt = "Logo da lanchonete esquina"
-            imgf.style.background = "black"
-            name.textContent = "Esquina";
-            rua.textContent = "Jorge lacerda";
-            num.textContent = "21"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/esquina.pizzaria_hamburgueria?igsh=M3d6eTQ5cHZhZXQ5";
-            midias.href = "https://wa.me/5547997508905";
-            phones.textContent = "(47) 997508905";
-            btnw.href = "https://wa.me/5547997508905";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% Para:</li> <li>Pizza</li><li>Hamburguer</li>";
-            break;  // Corrigido para parar após o segundo caso
-
-        case 'Nome: Doce Delicia':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/docedelicia.png"
-            img.alt = "Logo do Food Truck Doce Delicia"
-            imgf.style.background = "white"
-            name.textContent = "Doce Delicia";
-            rua.textContent = "Rodovia Bruno Heidrich";
-            num.textContent = "S/N"
-            bairro.textContent = "Br 470";
-            midia.href = "https://www.instagram.com/doce_deliciaaaa_?igsh=NWVoYXRjbWF4MTBp";
-            midias.href = "https://wa.me/5547992897078";
-            phones.textContent = "(47) 992897078";
-            btnw.href = "https://wa.me/5547992897078";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>Delivery e retirada no local</li> <li>A partir de R$30 2% <br> de desconto</li><li>A partir de R$50 10% <br> de desconto</li>";
-        break;  
-        case 'Nome: Point do Açai':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/POINT.png"
-            img.alt = "Logo do point do açai"
-            imgf.style.background = "#75196E"
-            name.textContent = "Point do Açai";
-            rua.textContent = "Rua 7 de Setembro";
-            num.textContent = "569"
-            bairro.textContent = "Independência";
-            midia.href = "https://www.instagram.com/pointdoacaisorvetes?igsh=MXh2YmpvYnNzcDdxdA==";
-            midias.href = "https://wa.me/5547992281688";
-            phones.textContent = "(47) 992281688";
-            btnw.href = "https://wa.me/5547992281688";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% Para:</li> <li>Marmita 400gm</li> <li>Barca 500gm</li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso
-        case 'Nome: Diego Chapeação Pintura':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/diegochapeacao.jpeg"
-            img.alt = "Logo Diego Chapeação Pintura"
-            imgf.style.background = "black"
-            name.innerHTML = "Diego Chapeação<br>Pintura";
-            rua.textContent = "Rua 23 De Julho";
-            num.textContent = "1265"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/diegochapeacaoepintura?igsh=bnF6cXVwZnphdXVr";
-            midias.href = "https://wa.me/55479991077674";
-            phones.textContent = "(47) 991077674";
-            btnw.href = "https://wa.me/5547991077674";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% De Desconto<br>Em Serviços Particulares</li><li>(Somente Avista)<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso
-        case 'Nome: Dijan Chapeação Pintura':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/dijan.jpeg"
-            img.alt = "Logo Dijan Chapeaçao e Pintura"
-            imgf.style.background = "black"
-            name.innerHTML = "Dijan Chapeação<br>Pintura";
-            rua.textContent = "BR470 km175";
-            num.textContent = "1265"
-            bairro.textContent = "Arno Siewerdt";
-            midia.href = "https://www.instagram.com/chapeacaodijan?igsh=MWMyNnhlMHQ2M3c4cg==";
-            midias.href = "https://wa.me/5547991603096";
-            phones.textContent = "(47) 991603096";
-            btnw.href = "https://wa.me/5547991603096";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>5% De Desconto<br>Em Serviços Particulares<br>e na franquia</li><li>(Somente Avista)<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Minibom':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/minibom.jpeg"
-            img.alt = "Logo Auto Posto PR"
-            imgf.style.background = "#fff5f6"
-            name.innerHTML = "Minibom";
-            rua.textContent = "Rua Nereu Ramos";
-            num.textContent = "48 sala 01"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/minibomsorveteecafe?igsh=MWQ4YXlrcHpneGdxMg==";
-            midias.href = "https://wa.me/5547997750531";
-            phones.textContent = "(47) 997750531";
-            btnw.href = "https://wa.me/5547997750531";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>8% de Desconto nos produtos<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Pijurauto':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/pijurauto.jpeg"
-            img.alt = "Logo Pijurauto"
-            img.style.border = "2px solid white"
-            imgf.style.background = "#f26022"
-            name.innerHTML = "Pijurauto";
-            rua.textContent = "Rua Presidente Nereu";
-            num.textContent = "131"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/postopijurautocascata?igsh=bWNtc2dwcGY5Y2R0";
-            midias.href = "https://wa.me/5547991190080";
-            phones.textContent = "(47) 991190080";
-            btnw.href = "https://wa.me/5547991190080";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>20 centavos de desconto no litro de Gasolina comum<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Vision Estética Automotiva':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/vision.jpeg"
-            img.alt = "Logo Vision"
-            imgf.style.background = "#2e1c1a"
-            name.innerHTML = "Vision Estética Automotiva";
-            rua.textContent = "SC 350 km375 (junto ao posto gaucho)";
-            num.textContent = "S/n"
-            bairro.textContent = "Santa Teresa";
-            midia.href = "https://www.instagram.com/vision.estetica_automotiva?igsh=MW5jcXIzNnZ0cmJ3ag==";
-            midias.href = "https://wa.me/5547997351553";
-            phones.textContent = "(47) 997351553";
-            btnw.href = "https://wa.me/5547997351553";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% na lavação automotiva<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Tintas Wilson e Filho':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/tintas.jpeg"
-            img.alt = "Logo Tintas Wilson e Filho"
-            imgf.style.background = "white"
-            name.innerHTML = "Tintas Wilson e Filho";
-            rua.textContent = "Rua prefeito querino ferrari";
-            num.textContent = "176"
-            bairro.textContent = "Centro";
-            midia.href = "https://www.instagram.com/tintaswilsonefilho?igsh=MTFhamE3M29oODJrdQ==";
-            midias.href = "https://wa.me/5547935451509";
-            phones.textContent = "(47) 935451509";
-            btnw.href = "https://wa.me/5547935451509";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>5% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Ovande Oficina Mecânica':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/ovande.png"
-            img.alt = "Logo Ovande Oficina Mecânica"
-            img.style.border = "2px solid white"
-            imgf.style.background = "#054897"
-            name.innerHTML = "Ovande Oficina Mecânica";
-            rua.textContent = "Rua dos Pioneiros";
-            num.textContent = "2112"
-            bairro.textContent = "Centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5547988123141";
-            phones.textContent = "(47) 988123141";
-            btnw.href = "https://wa.me/5547988123141";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% de Descontos Nas Peças<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Auto Elétrica Pesenti Ltda':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/eletrica.png"
-            img.alt = "Logo Ovande Oficina Mecânica"
-            imgf.style.background = "#0d1021"
-            name.innerHTML = "Auto Elétrica Pesenti Ltda";
-            rua.textContent = "Av. 25 de julho";
-            num.textContent = "298"
-            bairro.textContent = "Centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5547999939094";
-            phones.textContent = "(47) 999939094";
-            btnw.href = "https://wa.me/5547999939094";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>5% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Chaves JVS':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/chaveiro.png"
-            img.alt = "Logo Chaveiro JVS"
-            imgf.style.background = "white"
-            name.innerHTML = "Chaves JVS";
-            rua.textContent = "Rua dos Pioneiros";
-            num.textContent = "647"
-            bairro.textContent = "Centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5547988474810";
-            phones.textContent = "(47) 988474810";
-            btnw.href = "https://wa.me/5547988474810";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>15% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Auto Car':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/autocar.png"
-            img.alt = "Logo Auto Car"
-            imgf.style.background = "black"
-            name.innerHTML = "Auto Car";
-            rua.textContent = "Raul Tenete Costa";
-            num.textContent = "400"
-            bairro.textContent = "Centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5549991848879";
-            phones.textContent = "(49) 991848879";
-            btnw.href = "https://wa.me/5549991848879";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>8% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Daniel Eletro':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/danieleletro.jpeg"
-            img.alt = "Logo Daniel Eletro"
-            imgf.style.background = "#34004f"
-            name.innerHTML = "Daniel Eletro";
-            rua.textContent = "Rua Leonel Thiesen ";
-            num.textContent = "2044"
-            bairro.textContent = "Vila Nova";
-            midia.href = "https://www.instagram.com/danieleletro.com.br?igsh=ZHlwZDA3bXp0eDNv";
-            midias.href = "https://wa.me/5549999904389";
-            phones.textContent = "(49) 999904389";
-            btnw.href = "https://wa.me/5549999904389";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>15% de Desconto Na primeira Compra<li> <li>10% de Desconto Nas demais Compra<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: J.Santos':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/jsantos.png"
-            img.alt = "Logo J.Santos"
-            imgf.style.background = "#464646"
-            name.innerHTML = "J.Santos";
-            rua.textContent = "Rua Governador Jorge Lacerda";
-            num.textContent = "270"
-            bairro.textContent = "centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5547991082330";
-            phones.textContent = "(47) 991082330";
-            btnw.href = "https://wa.me/5547991082330";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>15% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Pit Stop':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/pitstop.jpeg"
-            img.alt = "Logo Pit Stop"
-            imgf.style.background = "black"
-            name.innerHTML = "Pit Stop";
-            rua.textContent = "Rua Guilherme Kanitz";
-            num.textContent = "S/N"
-            bairro.textContent = "centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/5547999289532";
-            phones.textContent = "(47) 999289532";
-            btnw.href = "https://wa.me/5547999289532";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>10% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-            case 'Nome: Posto Coração do Estado':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/posto.jpeg"
-            img.alt = "Logo Posto Coração do Estado"
-            imgf.style.background = "#ffffff"
-            name.innerHTML = "Posto Coração do Estado";
-            rua.textContent = "Rodovia BR470 km 176";
-            num.textContent = "10243"
-            bairro.textContent = "centro";
-            midia.href = "  https://www.instagram.com/posto_coracao_do_estado/";
-            midias.href = "https://wa.me/554735451209";
-            phones.textContent = "(47) 35451209";
-            btnw.href = "https://wa.me/554735451209";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>3% de Desconto<li>";
-        break;  // Corrig// Corrigido para parar após o segundo caso"
-        case 'Nome: Loja Da Kau':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/kau.jpeg"
-            img.alt = "Logo Loja da Kau"
-            imgf.style.background = "#f6f6f6"
-            name.innerHTML = "Loja da Kau";
-            rua.textContent = "Dorvalino Gonzaga";
-            num.textContent = "96"
-            bairro.textContent = "centro";
-            midia.style.display = "none";
-            midias.href = "https://wa.me/554799605878";
-            phones.textContent = "(47) 99605878";
-            btnw.href = "https://wa.me/554799605878";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>3% de Desconto<li>";
-        break;
-        case 'Nome: Santos Auto Center':
-            lojas.style.display = 'flex';
-            img.src = "img/logos/autocenter.png"
-            img.alt = "Logo Santos Auto Center"
-            imgf.style.background = "#f6f6f6"
-            name.innerHTML = "Santos Auto Center";
-            rua.textContent = "Leoberto leal";
-            num.textContent = "103"
-            bairro.textContent = "centro";
-            midia.href = "https://www.instagram.com/autocentersantos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
-            midias.href = "https://wa.me/5547999658278";
-            phones.textContent = "(47) 999658278";
-            btnw.href = "https://wa.me/5547999658278";
-            // Adicionando produtos de forma correta
-            produtos.innerHTML = "<li>5% de Desconto<li>";
-        break; // Corrig// Corrigido para parar após o segundo caso"
-        default:
-            break;  // Adicionando default para casos não previstos
-    }
-
+        card.addEventListener("click", () => abrirModal(parceiro));
+        areaContainer.appendChild(card);
+    });
 }
-let fecharModal = document.querySelector(".fechar_modal");
-fecharModal.addEventListener("click", function () {
-    let img = document.querySelector(".img_troca")
-    img.style.border = "2px solid #ff5900"
-    document.querySelector(".modalc").style.display = 'none';
+
+
+function abrirModal(p) {
+    document.querySelector(".img_troca").src = formatImage(p.imagem);
+    document.querySelector(".img_troca").alt = p.alt;
+    document.querySelector(".name").textContent = p.nome;
+    document.querySelector(".rua").textContent = p.endereco;
+    document.querySelector(".num").textContent = p.numero;
+    document.querySelector(".bairro").textContent = p.bairro;
+    document.querySelector(".phones").textContent = p.telefone;
+
+    // Links
+    const insta = document.querySelector(".links");
+    const whats = document.querySelector(".links2");
+    const btnContato = document.querySelector(".btnw");
+
+    insta.href = p.instagram || "#";
+    insta.style.display = p.instagram ? "inline-block" : "none";
+
+    const numeroWhats = (p.whats || "").replace(/\D/g, ""); // remove tudo que não for número
+    whats.href = "https://wa.me/" + numeroWhats;
+    btnContato.href = "https://wa.me/" + numeroWhats;
+
+    // Descontos
+    const produtos = document.querySelector(".produtos");
+    produtos.innerHTML = "";
+
+    const descontos = (p.desconto || "").split(";");
+    descontos.forEach(desc => {
+        const li = document.createElement("li");
+        li.textContent = desc.trim();
+        produtos.appendChild(li);
+    });
+
+    modal.style.display = "flex";
+}
+
+
+document.querySelector(".fechar_modal").addEventListener("click", () => {
+    modal.style.display = "none";
 });
+
+function aplicarFiltro() {
+
+    const cidadeSelecionada = document.querySelector('input[name="cidade"]:checked');
+    const tipoSelecionado = document.querySelector('input[name="estabelecimento"]:checked');
+
+    const cidade = cidadeSelecionada ? cidadeSelecionada.value.toLowerCase() : null;
+    const tipo = tipoSelecionado ? tipoSelecionado.value.toLowerCase() : null;
+
+    const cards = document.querySelectorAll(".area_conteudo");
+    let encontrados = 0;
+
+    cards.forEach(card => {
+        const cardCidade = card.getAttribute("data-cidade").toLowerCase();
+        const cardTipo = card.getAttribute("data-tipo").toLowerCase();
+
+        const cidadeMatch = cidade ? cidade === cardCidade : true;
+        const tipoMatch = tipo ? tipo === cardTipo : true;
+
+        if (cidadeMatch && tipoMatch) {
+            card.style.display = "grid";
+            encontrados++;
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    if (encontrados === 0) {
+        areaContainer.innerHTML = "<p>Nenhum resultado encontrado.</p>";
+    }
+}
+
+function removerFiltro() {
+    document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
+    renderParceiros(estabelecimentos);
+}
+
+function btnn(acao) {
+    if (acao === "Filtrar") {
+        document.querySelector(".modalf").style.display = "none"
+        aplicarFiltro();
+    } else if (acao === "removefiltro") {
+        removerFiltro();
+    } else if (acao === "CIDADE") {
+        document.querySelector(".modalf").style.display = "flex";
+    }
+}
+
+function formatImage(url) {
+    if (!url) return "";
+    return url.startsWith("http") ? url : `https://${url}`;
+}
+
+fetchParceiros();
