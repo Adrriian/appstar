@@ -13,7 +13,7 @@ menu.addEventListener("click", () => {
     }
 })
 
-const API_URL = 'https://sheetdb.io/api/v1/zurdkl1c4o21d';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec';
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
 let estabelecimentos = [];
