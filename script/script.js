@@ -1,18 +1,19 @@
 // Script atualizado com base no HTML e JS fornecidos
-let menu = document.querySelector(".menu_mobile_bar")
+let menu = document.querySelector(".menu_mobile_bar");
 menu.addEventListener("click", () => {
-    let content = document.querySelector("main")
-    let menu_m = document.querySelector(".menu_area")
+    let content = document.querySelector("main");
+    let menu_m = document.querySelector(".menu_area");
 
     if (menu_m.style.height == "100vh") {
-        menu_m.style.height = "6vh"
-        content.classList.remove('hidden')
+        menu_m.style.height = "6vh";
+        content.classList.remove('hidden');
     } else {
-        menu_m.style.height = "100vh"
-        content.classList.toggle('hidden')
+        menu_m.style.height = "100vh";
+        content.classList.toggle('hidden');
     }
-})
+});
 
+// Link da API correta
 const API_URL = 'https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec';
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
@@ -29,12 +30,11 @@ async function fetchParceiros() {
         const cidadesExistentes = Array.from(containerCidades.querySelectorAll("input[name='cidade']"))
             .map(input => input.value.trim().toLowerCase());
 
-       const cidadesUnicas = [...new Set(
-    estabelecimentos
-        .map(item => item.cidade && item.cidade.trim())
-        .filter(cidade => cidade) // remove null, undefined ou string vazia
-)];
-
+        const cidadesUnicas = [...new Set(
+            estabelecimentos
+                .map(item => item.cidade && item.cidade.trim())
+                .filter(cidade => cidade) // remove null, undefined ou string vazia
+        )];
 
         cidadesUnicas.forEach(cidade => {
             const cidadeNormalizada = cidade.toLowerCase();
@@ -66,7 +66,6 @@ async function fetchParceiros() {
         console.error("Erro ao buscar dados da planilha:", error);
     }
 }
-
 
 function renderParceiros(data) {
     if (!areaContainer) return;
@@ -108,7 +107,6 @@ function renderParceiros(data) {
     });
 }
 
-
 function abrirModal(p) {
     document.querySelector(".img_troca").src = formatImage(p.imagem);
     document.querySelector(".img_troca").alt = p.alt;
@@ -144,13 +142,11 @@ function abrirModal(p) {
     modal.style.display = "flex";
 }
 
-
 document.querySelector(".fechar_modal").addEventListener("click", () => {
     modal.style.display = "none";
 });
 
 function aplicarFiltro() {
-
     const cidadeSelecionada = document.querySelector('input[name="cidade"]:checked');
     const tipoSelecionado = document.querySelector('input[name="estabelecimento"]:checked');
 
@@ -187,7 +183,7 @@ function removerFiltro() {
 
 function btnn(acao) {
     if (acao === "Filtrar") {
-        document.querySelector(".modalf").style.display = "none"
+        document.querySelector(".modalf").style.display = "none";
         aplicarFiltro();
     } else if (acao === "removefiltro") {
         removerFiltro();
