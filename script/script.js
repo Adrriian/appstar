@@ -5,7 +5,7 @@ menu.addEventListener("click", () => {
 
     if (menu_m.style.height == "100vh") {
         menu_m.style.height = "6vh"
-        content.classList.remove('hidden')
+        
     } else {
         menu_m.style.height = "100vh"
         content.classList.toggle('hidden')
