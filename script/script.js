@@ -87,17 +87,17 @@ function renderParceiros(data) {
         card.setAttribute("data-cidade", parceiro.cidade);
         card.setAttribute("data-tipo", parceiro.tipo);
 
-        card.innerHTML = 
+        card.innerHTML = `
             <div class="area_img">
-                <img src="${formatImage(parceiro.imagem)}" alt="${parceiro.alt}">
+                <img src="${formatImage(parceiro.imagem)}" alt="${parceiro.alt}" />
             </div>
             <div class="area_text">
                 <h1 class="p">Nome: ${parceiro.nome}</h1>
                 <h1 class="tiponame">Tipo: ${parceiro.tipo}</h1>
                 <h1 class="cidadename">Cidade: ${parceiro.cidade}</h1>
                 <h1 class="codigo">Codigo: ${parceiro.codigo}</h1>
-            </div>
-        ;
+            </div>`;
+
 
         card.addEventListener("click", () => abrirModal(parceiro));
         areaContainer.appendChild(card);
@@ -194,7 +194,8 @@ function btnn(acao) {
 
 function formatImage(url) {
     if (!url) return "";
-    return url.startsWith("http") ? url : https://${url};
+    return url.startsWith("http") ? url : `https://${url}`;
 }
+
 
 fetchParceiros();
