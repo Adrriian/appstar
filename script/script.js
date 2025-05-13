@@ -7,7 +7,7 @@ let estabelecimentos = [];
 // Função para buscar dados da API
 async function fetchParceiros() {
     try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbwi2WmTNerpKWpKP2oHdDjIJcjAd8MYZIetzJoQ-nmWnS6pnAUbApKVRnZi84usuf3B8A/exec');
+        const response = await fetch(API_URL);
         if (!response.ok) {
             throw new Error("Erro ao buscar dados da API");
         }
