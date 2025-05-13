@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const imgForm = new FormData();
       imgForm.append("image", arquivoImagem);
 
-      const respostaUpload = await fetch(`https://api.imgbb.com/1/upload?key=0622c9e1bc2eaa66e70fb3c76a6c2a11`, {
+      const respostaUpload = await fetch(`https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec`, {
         method: "POST",
         body: imgForm
       });
