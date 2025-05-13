@@ -1,14 +1,11 @@
 let menu = document.querySelector(".menu_mobile_bar")
 menu.addEventListener("click", () => {
-    let content = document.querySelector("main")
     let menu_m = document.querySelector(".menu_area")
 
     if (menu_m.style.height == "100vh") {
         menu_m.style.height = "6vh"
-        
     } else {
         menu_m.style.height = "100vh"
-        content.classList.toggle('hidden')
     }
 })
 
