@@ -1,4 +1,4 @@
-const API_URL = 'https://script.google.com/macros/s/AKfycbxHJK7noEb6epB-Cjz4Y0RCrFQBfaxIMDroiNGXtMn-7KMEW7pCqzLt1SG6WK1M7jSH-Q/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwi2WmTNerpKWpKP2oHdDjIJcjAd8MYZIetzJoQ-nmWnS6pnAUbApKVRnZi84usuf3B8A/exec';
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
 const containerCidades = document.querySelector('.filtro_cidade_area');
