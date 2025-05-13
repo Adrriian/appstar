@@ -1,75 +1,69 @@
-// Script atualizado com base no HTML e JS fornecidos
-let menu = document.querySelector(".menu_mobile_bar");
-menu.addEventListener("click", () => {
-    let content = document.querySelector("main");
-    let menu_m = document.querySelector(".menu_area");
-
-    if (menu_m.style.height == "100vh") {
-        menu_m.style.height = "6vh";
-        content.classList.remove('hidden');
-    } else {
-        menu_m.style.height = "100vh";
-        content.classList.toggle('hidden');
-    }
-});
-
-// Link da API correta
-const API_URL = 'https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbxHJK7noEb6epB-Cjz4Y0RCrFQBfaxIMDroiNGXtMn-7KMEW7pCqzLt1SG6WK1M7jSH-Q/exec';
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
+const containerCidades = document.querySelector('.filtro_cidade_area');
 let estabelecimentos = [];
 
+// Função para buscar dados da API
 async function fetchParceiros() {
     try {
         const response = await fetch(API_URL);
+        if (!response.ok) {
+            throw new Error("Erro ao buscar dados da API");
+        }
         estabelecimentos = await response.json();
         renderParceiros(estabelecimentos);
 
         // Adiciona cidades automaticamente ao filtro após renderizar os parceiros
-        const containerCidades = document.querySelector('.filtro_cidade_area');
-        const cidadesExistentes = Array.from(containerCidades.querySelectorAll("input[name='cidade']"))
-            .map(input => input.value.trim().toLowerCase());
-
-        const cidadesUnicas = [...new Set(
-            estabelecimentos
-                .map(item => item.cidade && item.cidade.trim())
-                .filter(cidade => cidade) // remove null, undefined ou string vazia
-        )];
-
-        cidadesUnicas.forEach(cidade => {
-            const cidadeNormalizada = cidade.toLowerCase();
-            if (!cidadesExistentes.includes(cidadeNormalizada)) {
-                const cidadeId = cidade
-                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                    .replace(/\s+/g, '').toLowerCase();
-
-                const div = document.createElement('div');
-                div.className = 'filtro_cidade';
-
-                const input = document.createElement('input');
-                input.type = 'radio';
-                input.name = 'cidade';
-                input.id = cidadeId;
-                input.value = cidade;
-
-                const label = document.createElement('label');
-                label.htmlFor = cidadeId;
-                label.textContent = cidade;
-
-                div.appendChild(input);
-                div.appendChild(label);
-                containerCidades.appendChild(div);
-            }
-        });
-
+        adicionarCidadesAoFiltro(estabelecimentos);
     } catch (error) {
         console.error("Erro ao buscar dados da planilha:", error);
     }
 }
 
+// Função para adicionar cidades ao filtro
+function adicionarCidadesAoFiltro(estabelecimentos) {
+    const cidadesExistentes = Array.from(containerCidades.querySelectorAll("input[name='cidade']"))
+        .map(input => input.value.trim().toLowerCase());
+
+    const cidadesUnicas = [...new Set(
+        estabelecimentos
+            .map(item => item.cidade && item.cidade.trim())
+            .filter(cidade => cidade) // remove null, undefined ou string vazia
+    )];
+
+    cidadesUnicas.forEach(cidade => {
+        const cidadeNormalizada = cidade.toLowerCase();
+        if (!cidadesExistentes.includes(cidadeNormalizada)) {
+            const cidadeId = cidade
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, '').toLowerCase();
+
+            const div = document.createElement('div');
+            div.className = 'filtro_cidade';
+
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'cidade';
+            input.id = cidadeId;
+            input.value = cidade;
+
+            const label = document.createElement('label');
+            label.htmlFor = cidadeId;
+            label.textContent = cidade;
+
+            div.appendChild(input);
+            div.appendChild(label);
+            containerCidades.appendChild(div);
+        }
+    });
+}
+
+// Função para renderizar parceiros na página
 function renderParceiros(data) {
     if (!areaContainer) return;
-    areaContainer.innerHTML = "";
+    areaContainer.innerHTML = ""; // Limpa o conteúdo existente antes de renderizar os novos parceiros
+
     data.forEach(parceiro => {
         // Verifica se todos os campos obrigatórios (exceto instagram) estão preenchidos
         const camposObrigatorios = [
@@ -107,24 +101,25 @@ function renderParceiros(data) {
     });
 }
 
-function abrirModal(p) {
-    document.querySelector(".img_troca").src = formatImage(p.imagem);
-    document.querySelector(".img_troca").alt = p.alt;
-    document.querySelector(".name").textContent = p.nome;
-    document.querySelector(".rua").textContent = p.endereco;
-    document.querySelector(".num").textContent = p.numero;
-    document.querySelector(".bairro").textContent = p.bairro;
-    document.querySelector(".phones").textContent = p.telefone;
+// Função para abrir o modal com informações detalhadas do parceiro
+function abrirModal(parceiro) {
+    document.querySelector(".img_troca").src = formatImage(parceiro.imagem);
+    document.querySelector(".img_troca").alt = parceiro.alt;
+    document.querySelector(".name").textContent = parceiro.nome;
+    document.querySelector(".rua").textContent = parceiro.endereco;
+    document.querySelector(".num").textContent = parceiro.numero;
+    document.querySelector(".bairro").textContent = parceiro.bairro;
+    document.querySelector(".phones").textContent = parceiro.telefone;
 
     // Links
     const insta = document.querySelector(".links");
     const whats = document.querySelector(".links2");
     const btnContato = document.querySelector(".btnw");
 
-    insta.href = p.instagram || "#";
-    insta.style.display = p.instagram ? "inline-block" : "none";
+    insta.href = parceiro.instagram || "#";
+    insta.style.display = parceiro.instagram ? "inline-block" : "none";
 
-    const numeroWhats = (p.whats || "").replace(/\D/g, ""); // remove tudo que não for número
+    const numeroWhats = (parceiro.whats || "").replace(/\D/g, ""); // remove tudo que não for número
     whats.href = "https://wa.me/" + numeroWhats;
     btnContato.href = "https://wa.me/" + numeroWhats;
 
@@ -132,7 +127,7 @@ function abrirModal(p) {
     const produtos = document.querySelector(".produtos");
     produtos.innerHTML = "";
 
-    const descontos = (p.desconto || "").split(";");
+    const descontos = (parceiro.desconto || "").split(";");
     descontos.forEach(desc => {
         const li = document.createElement("li");
         li.textContent = desc.trim();
@@ -142,10 +137,12 @@ function abrirModal(p) {
     modal.style.display = "flex";
 }
 
+// Fechar o modal
 document.querySelector(".fechar_modal").addEventListener("click", () => {
     modal.style.display = "none";
 });
 
+// Função para aplicar o filtro
 function aplicarFiltro() {
     const cidadeSelecionada = document.querySelector('input[name="cidade"]:checked');
     const tipoSelecionado = document.querySelector('input[name="estabelecimento"]:checked');
@@ -176,11 +173,13 @@ function aplicarFiltro() {
     }
 }
 
+// Função para remover o filtro
 function removerFiltro() {
     document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
     renderParceiros(estabelecimentos);
 }
 
+// Função para exibir o filtro de cidade
 function btnn(acao) {
     if (acao === "Filtrar") {
         document.querySelector(".modalf").style.display = "none";
@@ -192,9 +191,11 @@ function btnn(acao) {
     }
 }
 
+// Função para formatar a URL da imagem
 function formatImage(url) {
     if (!url) return "";
     return url.startsWith("http") ? url : `https://${url}`;
 }
 
+// Inicia a busca pelos parceiros assim que a página for carregada
 fetchParceiros();
