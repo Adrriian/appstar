@@ -9,7 +9,7 @@ menu.addEventListener("click", () => {
     }
 })
 
-const API_URL = 'https://script.google.com/macros/s/AKfycbwiZfFqP31Z61N3cNpglvXxu0DkhuKFMHB-Y6VneDVaWwyvXoOFn8DA-nW7Z2dmBzr8Gw/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbxW2Opq24K_cBXFaQGH5Jyhhyb8bmhbWDDetMTOO85WHe5B3nqp4n6V6Y6TWuUd9JKarw/exec';
 
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
