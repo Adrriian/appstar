@@ -9,149 +9,127 @@ menu.addEventListener("click", () => {
     }
 })
 
-const API_URL = 'https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwiZfFqP31Z61N3cNpglvXxu0DkhuKFMHB-Y6VneDVaWwyvXoOFn8DA-nW7Z2dmBzr8Gw/exec';
+
 const areaContainer = document.querySelector(".area");
 const modal = document.querySelector(".modalc");
 let estabelecimentos = [];
 
-async function fetchParceiros() {
+async function fetchEstabelecimentos() {
     try {
         const response = await fetch(API_URL);
-        estabelecimentos = await response.json();
-        renderParceiros(estabelecimentos);
-
-        // Adiciona cidades automaticamente ao filtro após renderizar os parceiros
-        const containerCidades = document.querySelector('.filtro_cidade_area');
-        const cidadesExistentes = Array.from(containerCidades.querySelectorAll("input[name='cidade']"))
-            .map(input => input.value.trim().toLowerCase());
-
-       const cidadesUnicas = [...new Set(
-    estabelecimentos
-        .map(item => item.cidade && item.cidade.trim())
-        .filter(cidade => cidade) // remove null, undefined ou string vazia
-)];
-
-
-        cidadesUnicas.forEach(cidade => {
-            const cidadeNormalizada = cidade.toLowerCase();
-            if (!cidadesExistentes.includes(cidadeNormalizada)) {
-                const cidadeId = cidade
-                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                    .replace(/\s+/g, '').toLowerCase();
-
-                const div = document.createElement('div');
-                div.className = 'filtro_cidade';
-
-                const input = document.createElement('input');
-                input.type = 'radio';
-                input.name = 'cidade';
-                input.id = cidadeId;
-                input.value = cidade;
-
-                const label = document.createElement('label');
-                label.htmlFor = cidadeId;
-                label.textContent = cidade;
-
-                div.appendChild(input);
-                div.appendChild(label);
-                containerCidades.appendChild(div);
-            }
-        });
-
+        const data = await response.json();
+        estabelecimentos = data;
+        renderCards(estabelecimentos);
+        preencherFiltroCidades(estabelecimentos);
     } catch (error) {
-        console.error("Erro ao buscar dados da planilha:", error);
+        console.error("Erro ao buscar dados:", error);
     }
 }
 
-
-function renderParceiros(data) {
+function renderCards(lista) {
     if (!areaContainer) return;
     areaContainer.innerHTML = "";
-    data.forEach(parceiro => {
-        // Verifica se todos os campos obrigatórios (exceto instagram) estão preenchidos
-        const camposObrigatorios = [
-            parceiro.nome,
-            parceiro.tipo,
-            parceiro.cidade,
-            parceiro.codigo,
-            parceiro.imagem,
-            parceiro.alt
-        ];
 
-        const dadosCompletos = camposObrigatorios.every(valor => valor && valor.trim() !== "");
-        if (!dadosCompletos) return; // Ignora se algum campo obrigatório estiver vazio
+    lista.forEach(est => {
+        if (!(est.nome && est.tipo && est.cidade && est.codigo && est.imagem && est.alt)) return;
 
         const card = document.createElement("div");
         card.className = "area_conteudo sm";
-        card.setAttribute("data-info", encodeURIComponent(JSON.stringify(parceiro)));
-        card.setAttribute("data-cidade", parceiro.cidade);
-        card.setAttribute("data-tipo", parceiro.tipo);
+        card.setAttribute("data-cidade", est.cidade);
+        card.setAttribute("data-tipo", est.tipo);
+        card.setAttribute("data-info", encodeURIComponent(JSON.stringify(est)));
 
         card.innerHTML = `
             <div class="area_img">
-                <img src="${formatImage(parceiro.imagem)}" alt="${parceiro.alt}" />
+                <img src="${formatImage(est.imagem)}" alt="${est.alt}" />
             </div>
             <div class="area_text">
-                <h1 class="p">Nome: ${parceiro.nome}</h1>
-                <h1 class="tiponame">Tipo: ${parceiro.tipo}</h1>
-                <h1 class="cidadename">Cidade: ${parceiro.cidade}</h1>
-                <h1 class="codigo">Codigo: ${parceiro.codigo}</h1>
-            </div>`;
+                <h1 class="p">Nome: ${est.nome}</h1>
+                <h1 class="tiponame">Tipo: ${est.tipo}</h1>
+                <h1 class="cidadename">Cidade: ${est.cidade}</h1>
+                <h1 class="codigo">Código: ${est.codigo}</h1>
+            </div>
+        `;
 
-
-        card.addEventListener("click", () => abrirModal(parceiro));
+        card.addEventListener("click", () => abrirModal(est));
         areaContainer.appendChild(card);
     });
 }
 
+function preencherFiltroCidades(lista) {
+    const container = document.querySelector('.filtro_cidade_area');
+    if (!container) return;
 
-function abrirModal(p) {
-    document.querySelector(".img_troca").src = formatImage(p.imagem);
-    document.querySelector(".img_troca").alt = p.alt;
-    document.querySelector(".name").textContent = p.nome;
-    document.querySelector(".rua").textContent = p.endereco;
-    document.querySelector(".num").textContent = p.numero;
-    document.querySelector(".bairro").textContent = p.bairro;
-    document.querySelector(".phones").textContent = p.telefone;
+    const cidadesExistentes = Array.from(container.querySelectorAll("input[name='cidade']"))
+        .map(input => input.value.trim().toLowerCase());
 
-    // Links
-    const insta = document.querySelector(".links");
-    const whats = document.querySelector(".links2");
-    const btnContato = document.querySelector(".btnw");
+    const cidades = [...new Set(lista.map(e => e.cidade).filter(Boolean))];
 
-    insta.href = p.instagram || "#";
-    insta.style.display = p.instagram ? "inline-block" : "none";
+    cidades.forEach(cidade => {
+        const cidadeId = cidade.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '').toLowerCase();
 
-    const numeroWhats = (p.whats || "").replace(/\D/g, ""); // remove tudo que não for número
-    whats.href = "https://wa.me/" + numeroWhats;
-    btnContato.href = "https://wa.me/" + numeroWhats;
+        if (!cidadesExistentes.includes(cidadeId)) {
+            const div = document.createElement("div");
+            div.className = "filtro_cidade";
 
-    // Descontos
-    const produtos = document.querySelector(".produtos");
+            const input = document.createElement("input");
+            input.type = "radio";
+            input.name = "cidade";
+            input.id = cidadeId;
+            input.value = cidade;
+
+            const label = document.createElement("label");
+            label.htmlFor = cidadeId;
+            label.textContent = cidade;
+
+            div.appendChild(input);
+            div.appendChild(label);
+            container.appendChild(div);
+        }
+    });
+}
+
+function abrirModal(info) {
+    modal.querySelector(".img_troca").src = formatImage(info.imagem);
+    modal.querySelector(".img_troca").alt = info.alt;
+    modal.querySelector(".name").textContent = info.nome;
+    modal.querySelector(".rua").textContent = info.endereco || "";
+    modal.querySelector(".num").textContent = info.numero || "";
+    modal.querySelector(".bairro").textContent = info.bairro || "";
+    modal.querySelector(".phones").textContent = info.telefone || "";
+
+    const insta = modal.querySelector(".links");
+    const whats = modal.querySelector(".links2");
+    const btnContato = modal.querySelector(".btnw");
+
+    insta.href = info.instagram || "#";
+    insta.style.display = info.instagram ? "inline-block" : "none";
+
+    const numeroWhats = (info.whats || "").replace(/\D/g, "");
+    whats.href = `https://wa.me/${numeroWhats}`;
+    btnContato.href = `https://wa.me/${numeroWhats}`;
+
+    const produtos = modal.querySelector(".produtos");
     produtos.innerHTML = "";
 
-    const descontos = (p.desconto || "").split(";");
+    const descontos = (info.desconto || "").split(";").map(d => d.trim()).filter(Boolean);
     descontos.forEach(desc => {
         const li = document.createElement("li");
-        li.textContent = desc.trim();
+        li.textContent = desc;
         produtos.appendChild(li);
     });
 
     modal.style.display = "flex";
 }
 
-
-document.querySelector(".fechar_modal").addEventListener("click", () => {
+document.querySelector(".fechar_modal")?.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
 function aplicarFiltro() {
-
-    const cidadeSelecionada = document.querySelector('input[name="cidade"]:checked');
-    const tipoSelecionado = document.querySelector('input[name="estabelecimento"]:checked');
-
-    const cidade = cidadeSelecionada ? cidadeSelecionada.value.toLowerCase() : null;
-    const tipo = tipoSelecionado ? tipoSelecionado.value.toLowerCase() : null;
+    const cidadeSelecionada = document.querySelector('input[name="cidade"]:checked')?.value.toLowerCase();
+    const tipoSelecionado = document.querySelector('input[name="estabelecimento"]:checked')?.value.toLowerCase();
 
     const cards = document.querySelectorAll(".area_conteudo");
     let encontrados = 0;
@@ -160,15 +138,13 @@ function aplicarFiltro() {
         const cardCidade = card.getAttribute("data-cidade").toLowerCase();
         const cardTipo = card.getAttribute("data-tipo").toLowerCase();
 
-        const cidadeMatch = cidade ? cidade === cardCidade : true;
-        const tipoMatch = tipo ? tipo === cardTipo : true;
+        const cidadeMatch = cidadeSelecionada ? cardCidade === cidadeSelecionada : true;
+        const tipoMatch = tipoSelecionado ? cardTipo === tipoSelecionado : true;
 
-        if (cidadeMatch && tipoMatch) {
-            card.style.display = "grid";
-            encontrados++;
-        } else {
-            card.style.display = "none";
-        }
+        const exibir = cidadeMatch && tipoMatch;
+        card.style.display = exibir ? "grid" : "none";
+
+        if (exibir) encontrados++;
     });
 
     if (encontrados === 0) {
@@ -178,12 +154,12 @@ function aplicarFiltro() {
 
 function removerFiltro() {
     document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
-    renderParceiros(estabelecimentos);
+    renderCards(estabelecimentos);
 }
 
 function btnn(acao) {
     if (acao === "Filtrar") {
-        document.querySelector(".modalf").style.display = "none"
+        document.querySelector(".modalf").style.display = "none";
         aplicarFiltro();
     } else if (acao === "removefiltro") {
         removerFiltro();
@@ -197,5 +173,5 @@ function formatImage(url) {
     return url.startsWith("http") ? url : `https://${url}`;
 }
 
-
-fetchParceiros();
+// Inicializa
+fetchEstabelecimentos();
