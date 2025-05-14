@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formLoja");
-  const botao = document.querySelector("button[type='submit']");
+  const botao = document.getElementById("btnEnviar");
   const mensagem = document.getElementById("mensagem");
   const btnUpload = document.getElementById("btnUpload");
   const inputImagem = document.getElementById("inputImagem");
@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let camposInvalidos = false;
     const inputs = form.querySelectorAll("input, textarea, select");
-
     inputs.forEach(input => input.style.border = "");
 
     inputs.forEach(input => {
@@ -97,75 +96,43 @@ document.addEventListener("DOMContentLoaded", () => {
       const imgForm = new FormData();
       imgForm.append("image", arquivoImagem);
 
-      const respostaUpload = await fetch(`https://script.google.com/macros/s/AKfycbwM4RajIuR5a9wM4Tw3-XnQ3ll9yQcVw5SjfeC_0eKT1qRbj_SB1mmpRk6Ry8rn-KtHwQ/exec`, {
+      // Fazendo upload da imagem para o ImgBB com a chave da API fornecida
+      const respostaUpload = await fetch(`https://api.imgbb.com/1/upload?key=0622c9e1bc2eaa66e70fb3c76a6c2a11`, {
         method: "POST",
         body: imgForm
       });
 
       const dadosImg = await respostaUpload.json();
       if (!respostaUpload.ok || !dadosImg.data?.url) {
-        throw new Error("Erro ao fazer upload da imagem.");
+        throw new Error("Erro ao fazer upload da imagem para o ImgBB.");
       }
 
+      // Link da imagem obtido do ImgBB
       dados.imagem = dadosImg.data.url;
 
-      const res = await fetch("https://sheetdb.io/api/v1/zurdkl1c4o21d");
-      const linhas = await res.json();
+      // Envia os dados da loja para a API do Google Apps Script
+      const respostaPost = await fetch("https://script.google.com/macros/s/AKfycbwiZfFqP31Z61N3cNpglvXxu0DkhuKFMHB-Y6VneDVaWwyvXoOFn8DA-nW7Z2dmBzr8Gw/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Origin": "https://your-website.com"  // Substitua pelo seu domínio real
+  },
+  body: JSON.stringify(dados)
+});
 
-      let maiorId = 0;
-      for (const linha of linhas) {
-        const idNum = parseInt(linha.id);
-        if (!isNaN(idNum) && idNum > maiorId) {
-          maiorId = idNum;
-        }
-      }
-      dados.id = (maiorId + 1).toString();
+      if (!respostaPost.ok) throw new Error("Erro ao adicionar nova loja.");
 
-      let linhaParaAtualizar = null;
-      for (const linha of linhas) {
-        const chaves = Object.keys(linha);
-        const apenasCodigoPreenchido = chaves.every(chave => {
-          if (chave === "codigo") return linha[chave]?.trim() !== "";
-          return linha[chave]?.trim() === "";
-        });
-        if (apenasCodigoPreenchido) {
-          linhaParaAtualizar = linha;
-          break;
-        }
-      }
-
-      if (linhaParaAtualizar) {
-        const codigo = linhaParaAtualizar.codigo;
-
-        const respostaUpdate = await fetch(`https://sheetdb.io/api/v1/zurdkl1c4o21d/codigo/${codigo}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ data: dados })
-        });
-
-        if (!respostaUpdate.ok) throw new Error("Erro ao atualizar linha com código.");
-
-        mensagem.textContent = "✅ Loja adicionada com sucesso!";
-      } else {
-        const respostaPost = await fetch("https://sheetdb.io/api/v1/zurdkl1c4o21d", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ data: dados })
-        });
-
-        if (!respostaPost.ok) throw new Error("Erro ao adicionar nova loja.");
-
-        mensagem.textContent = "✅ Loja adicionada em nova linha!";
-      }
-
+      mensagem.textContent = "✅ Loja adicionada com sucesso!";
       mensagem.style.display = "block";
       mensagem.style.color = "green";
       form.reset();
       nomeArquivo.textContent = "Nenhum arquivo selecionado";
+
     } catch (err) {
       console.error(err);
       mensagem.textContent = "❌ Erro ao adicionar a loja.";
       mensagem.style.display = "block";
+      mensagem.style.color = "red";
     }
   });
 });
