@@ -192,7 +192,6 @@ label {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     overflow-y: scroll;
-    height:60%;
    }
    .area_btn1{
         display: flex;
@@ -234,7 +233,7 @@ label {
    .filtro_estabelecimento_text {
        display: grid;
        grid-template-columns: 1fr;
-   
+       heigth:40vh;
    }
 
    .filtro_estabelecimento,
