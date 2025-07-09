@@ -192,7 +192,7 @@ label {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     overflow-y: scroll;
-    heigth:60%;
+    height:60%;
    }
    .area_btn1{
         display: flex;
@@ -223,7 +223,7 @@ label {
        padding: 10px;
        z-index: 1;
        width: 90vw;
-      heigth:90%;
+      height:90%;
        background-color: var(--bg-color3);
        color: var(--bg-color2);
        border-radius: 10px;
