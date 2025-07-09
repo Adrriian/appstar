@@ -469,15 +469,19 @@ label {
 
 }
 @media(min-width:320px) and (max-width:500px) {
+  .filtro_area_aberto {
+      heigth:80%;
+  
+   }
     .button_modal{
         width: 68%;
     }
    
     
 }
-@media(max-width:320px) {
+@media(max-width:319px) {
    .filtro_area_aberto {
-      heigth:90%;
+      heigth:80%;
   
    }
 
