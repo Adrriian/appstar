@@ -223,7 +223,7 @@ label {
        padding: 10px;
        z-index: 1;
        width: 90vw;
-       height: 90vh;
+      
        background-color: var(--bg-color3);
        color: var(--bg-color2);
        border-radius: 10px;
