@@ -476,6 +476,11 @@ label {
     
 }
 @media(max-width:320px) {
+   .filtro_area_aberto {
+      heigth:90%;
+  
+   }
+
  .filtro_estabelecimento_area,
     .filtro_cidade_area{
      grid-template-columns: 1fr;
