@@ -476,6 +476,11 @@ label {
     
 }
 @media(max-width:320px) {
+ .filtro_estabelecimento_area,
+    .filtro_cidade_area{
+     grid-template-columns: 1fr;
+     height:60%;
+    }
     .area_content_return h1 {
             text-align: center;
             font-size: 1.3rem;
