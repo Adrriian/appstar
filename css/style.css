@@ -234,7 +234,7 @@ label {
    .filtro_estabelecimento_text {
        display: grid;
        grid-template-columns: 1fr;
-       heigth:40vh;
+       height:40vh;
    }
 
    .filtro_estabelecimento,
