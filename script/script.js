@@ -97,7 +97,7 @@ function abrirModal(info) {
     modal.querySelector(".rua").textContent = info.endereco || "";
     modal.querySelector(".num").textContent = info.numero || "";
     modal.querySelector(".bairro").textContent = info.bairro || "";
-    modal.querySelector(".phones").textContent = info.whats || "";
+    modal.querySelector(".phones").textContent = info.telefone || "";
 
     const insta = modal.querySelector(".links");
     const whats = modal.querySelector(".links2");
@@ -175,4 +175,5 @@ function formatImage(url) {
 
 // Inicializa
 fetchEstabelecimentos();
+
 
